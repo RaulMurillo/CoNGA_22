@@ -3,7 +3,8 @@
 for d in ./*/
 do
   cd $d
-  ./myDCScript.sh
+  echo $PWD
+  ./myDCscript.sh && \
   ./myResultScript.sh
   cd ..
 done
