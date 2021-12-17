@@ -1,0 +1,961 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Dec 10 19:09:52 2021
+# Process ID: 28781
+# Current directory: /home/raul/CoNGA_22/Addition/PACoGen/add_8_2
+# Command line: vivado -mode batch -source vivado.tcl
+# Log file: /home/raul/CoNGA_22/Addition/PACoGen/add_8_2/vivado.log
+# Journal file: /home/raul/CoNGA_22/Addition/PACoGen/add_8_2/vivado.jou
+#-----------------------------------------------------------
+source vivado.tcl
+# proc dump_statistics {  } {
+#   set util_rpt [report_utilization -return_string]
+#   set LUTFFPairs 0
+#   set SliceRegisters 0
+#   set Slice 0
+#   set SliceLUTs 0
+#   set SliceLUTs1 0
+#   set BRAMFIFO36 0
+#   set BRAMFIFO18 0
+#   set BRAMFIFO36_star 0
+#   set BRAMFIFO18_star 0
+#   set BRAM18 0
+#   set BRAMFIFO 0
+#   set BIOB 0
+#   set DSPs 0
+#   set TotPower 0
+#   set design_slack 0
+#   set design_req 0
+#   set design_delay 0
+#   regexp --  {\s*LUT Flip Flop Pairs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore LUTFFPairs
+#   regexp --  {\s*Slice Registers\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceRegisters
+#   regexp --  {\s*Slice\s*\|\s*([^[:blank:]]+)} $util_rpt ignore Slice
+#   regexp --  {\s*Slice LUTs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceLUTs
+#   regexp --  {\s*Slice LUTs\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceLUTs1
+#   if { [expr {$LUTFFPairs == 0}] } {
+#     set LUTFFPairs $SliceLUTs1
+#     puts $SliceLUTs1
+#   }
+#   if { [expr {$SliceLUTs == 0}] } {
+#     set SliceLUTs $SliceLUTs1
+#   }
+#   regexp --  {\s*RAMB36/FIFO36\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO36
+#   regexp --  {\s*RAMB18/FIFO18\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO18
+#   regexp --  {\s*RAMB36/FIFO\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO36_star
+#   regexp --  {\s*RAMB18/FIFO\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO18_star
+#   regexp --  {\s*RAMB18\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAM18
+#   set BRAMFIFO [expr {(2 *$BRAMFIFO36) + $BRAMFIFO18 + (2*$BRAMFIFO36_star) + $BRAMFIFO18_star + $BRAM18}]
+#   regexp --  {\s*Bonded IOB\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BIOB
+#   regexp --  {\s*DSPs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore DSPs
+#   set power_rpt [report_power -return_string]
+#   regexp --  {\s*Total On-Chip Power \(W\)\s*\|\s*([^[:blank:]]+)} $power_rpt ignore TotPower
+#   set Timing_Paths [get_timing_paths -max_paths 1 -nworst 1 -setup]
+#   if { [expr {$Timing_Paths == ""}] } {
+#     set design_slack 0
+#     set design_req 0
+#   } else {
+#     set design_slack [get_property SLACK $Timing_Paths]
+#     set design_req [get_property REQUIREMENT  $Timing_Paths]
+#   }
+#   if { [expr {$design_slack == ""}] } {
+#     set design_slack 0
+#   }
+#   if { [expr {$design_req == ""}] } {
+#     set design_req 0
+#   }
+#   set design_delay [expr {$design_req - $design_slack}]
+#   file delete -force HLS_output//Synthesis/vivado_flow/kernel_report.xml 
+#   set ofile_report [open HLS_output//Synthesis/vivado_flow/kernel_report.xml w]
+#   puts $ofile_report "<?xml version=\"1.0\"?>"
+#   puts $ofile_report "<document>"
+#   puts $ofile_report "  <application>"
+#   puts $ofile_report "    <section stringID=\"XILINX_SYNTHESIS_SUMMARY\">"
+#   puts $ofile_report "      <item stringID=\"XILINX_LUT_FLIP_FLOP_PAIRS_USED\" value=\"$LUTFFPairs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE\" value=\"$Slice\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE_REGISTERS\" value=\"$SliceRegisters\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE_LUTS\" value=\"$SliceLUTs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_BLOCK_RAMFIFO\" value=\"$BRAMFIFO\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_IOPIN\" value=\"$BIOB\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_DSPS\" value=\"$DSPs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_POWER\" value=\"$TotPower\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_DESIGN_DELAY\" value=\"$design_delay\"/>"
+#   puts $ofile_report "    </section>"
+#   puts $ofile_report "  </application>"
+#   puts $ofile_report "</document>"
+#   close $ofile_report
+# };
+# set_param general.maxThreads 1
+# set outputDir HLS_output//Synthesis/vivado_flow
+# file mkdir $outputDir
+# create_project kernel -part xc7z020clg484-1 -force
+# read_verilog posit_add.v
+# set rfile_sdc [open HLS_output//Synthesis/vivado_flow/kernel.sdc r]
+# set clk_constraint [regexp -all --  CLK_SRC [read $rfile_sdc [file size HLS_output//Synthesis/vivado_flow/kernel.sdc]]]
+# if { [expr {$clk_constraint == 0}] } {
+#   set ofile_sdc [open HLS_output//Synthesis/vivado_flow/kernel.sdc a]
+#   # puts $ofile_sdc "set_property HD.CLK_SRC BUFGCTRL_X0Y0 \[get_ports clock\]"
+#   puts $ofile_sdc "set_property HD.PARTPIN_LOCS INT_R_X0Y0 \[get_ports in1\[0\]\]"
+#   puts $ofile_sdc "set_property HD.PARTPIN_LOCS INT_R_X0Y0 \[get_ports in2\[0\]\]"
+#   close $ofile_sdc
+# }
+# read_xdc HLS_output//Synthesis/vivado_flow/kernel.sdc
+# synth_design -mode out_of_context -no_iobuf -top posit_add -part xc7z020clg484-1
+Command: synth_design -mode out_of_context -no_iobuf -top posit_add -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28793
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2468.379 ; gain = 0.000 ; free physical = 642 ; free virtual = 25994
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'posit_add' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:2]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:159]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+INFO: [Synth 8-6157] synthesizing module 'data_extract_v1' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:155]
+	Parameter N bound to: 8 - type: integer 
+	Parameter es bound to: 2 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:332]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+INFO: [Synth 8-6157] synthesizing module 'LOD_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:327]
+	Parameter N bound to: 8 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6157] synthesizing module 'LOD' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+	Parameter N bound to: 8 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6157] synthesizing module 'LOD__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+	Parameter N bound to: 4 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6157] synthesizing module 'LOD__parameterized1' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+	Parameter N bound to: 2 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'LOD__parameterized1' (1#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'LOD__parameterized0' (1#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'LOD' (1#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:332]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+INFO: [Synth 8-6155] done synthesizing module 'LOD_N' (2#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:327]
+INFO: [Synth 8-6157] synthesizing module 'DSR_left_N_S' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:285]
+	Parameter N bound to: 8 - type: integer 
+	Parameter S bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DSR_left_N_S' (3#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:285]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:159]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'data_extract_v1' (4#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:155]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:159]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+INFO: [Synth 8-6157] synthesizing module 'abs_regime' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:252]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'abs_regime' (5#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:252]
+INFO: [Synth 8-6157] synthesizing module 'sub_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sub_N_in' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sub_N_in' (6#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+INFO: [Synth 8-6155] done synthesizing module 'sub_N' (7#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+INFO: [Synth 8-6157] synthesizing module 'DSR_right_N_S' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+	Parameter N bound to: 8 - type: integer 
+	Parameter S bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DSR_right_N_S' (8#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+INFO: [Synth 8-6157] synthesizing module 'add_sub_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:230]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'add_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:204]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'add_N_in' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:222]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'add_N_in' (9#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'add_N' (10#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:204]
+INFO: [Synth 8-6157] synthesizing module 'sub_N__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sub_N_in__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sub_N_in__parameterized0' (10#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+INFO: [Synth 8-6155] done synthesizing module 'sub_N__parameterized0' (10#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+INFO: [Synth 8-6155] done synthesizing module 'add_sub_N' (11#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:230]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:332]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+INFO: [Synth 8-6157] synthesizing module 'add_1' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:243]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'add_1' (12#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:243]
+INFO: [Synth 8-6157] synthesizing module 'reg_exp_op' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:269]
+	Parameter es bound to: 2 - type: integer 
+	Parameter Bs bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'conv_2c' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:262]
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_2c' (13#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:262]
+INFO: [Synth 8-6155] done synthesizing module 'reg_exp_op' (14#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:269]
+INFO: [Synth 8-6157] synthesizing module 'DSR_right_N_S__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+	Parameter N bound to: 27 - type: integer 
+	Parameter S bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DSR_right_N_S__parameterized0' (14#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+INFO: [Synth 8-6155] done synthesizing module 'posit_add' (15#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2468.379 ; gain = 0.000 ; free physical = 261 ; free virtual = 25623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2468.379 ; gain = 0.000 ; free physical = 1036 ; free virtual = 26398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2468.379 ; gain = 0.000 ; free physical = 1036 ; free virtual = 26398
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2468.379 ; gain = 0.000 ; free physical = 1087 ; free virtual = 26449
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc]
+CRITICAL WARNING: [Vivado 12-2323] Tile INT_R_X0Y0 does not exist. [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc:1]
+CRITICAL WARNING: [Vivado 12-2323] Tile INT_R_X0Y0 does not exist. [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc:2]
+Finished Parsing XDC File [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2476.258 ; gain = 0.000 ; free physical = 1008 ; free virtual = 26369
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2476.258 ; gain = 0.000 ; free physical = 1008 ; free virtual = 26369
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 1079 ; free virtual = 26440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 1079 ; free virtual = 26440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 1083 ; free virtual = 26440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 1070 ; free virtual = 26432
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 2     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   3 Input    7 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input   27 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 18    
+	   2 Input    7 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 1050 ; free virtual = 26418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 917 ; free virtual = 26292
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 917 ; free virtual = 26292
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 914 ; free virtual = 26289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 923 ; free virtual = 26288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 923 ; free virtual = 26288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 923 ; free virtual = 26288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 923 ; free virtual = 26288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 923 ; free virtual = 26288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 923 ; free virtual = 26288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     7|
+|2     |LUT1   |     6|
+|3     |LUT2   |    11|
+|4     |LUT3   |    32|
+|5     |LUT4   |    37|
+|6     |LUT5   |    47|
+|7     |LUT6   |    90|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 2476.258 ; gain = 7.879 ; free physical = 923 ; free virtual = 26288
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2476.258 ; gain = 0.000 ; free physical = 980 ; free virtual = 26345
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2476.266 ; gain = 7.879 ; free physical = 980 ; free virtual = 26345
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2476.266 ; gain = 0.000 ; free physical = 1067 ; free virtual = 26432
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc]
+CRITICAL WARNING: [Vivado 12-2323] Tile INT_R_X0Y0 does not exist. [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc:1]
+CRITICAL WARNING: [Vivado 12-2323] Tile INT_R_X0Y0 does not exist. [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc:2]
+Finished Parsing XDC File [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2476.266 ; gain = 0.000 ; free physical = 1004 ; free virtual = 26369
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d3e1d2d
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 47 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:00:54 . Memory (MB): peak = 2476.266 ; gain = 8.012 ; free physical = 1152 ; free virtual = 26517
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+# write_checkpoint -force $outputDir/post_synth.dcp
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/post_synth.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+# report_utilization -file $outputDir/post_synth_util.rpt
+# dump_statistics
+184
+Command: report_power -return_string
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.94 . Memory (MB): peak = 2663.016 ; gain = 0.000 ; free physical = 844 ; free virtual = 26210
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 2e762630
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.016 ; gain = 0.000 ; free physical = 844 ; free virtual = 26210
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: f2871021
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 6 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: a692d580
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15400f054
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 15400f054
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 15400f054
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 15400f054
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               6  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+Ending Logic Optimization Task | Checksum: f3d78d3d
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 701 ; free virtual = 26067
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: f3d78d3d
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 841 ; free virtual = 26207
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: f3d78d3d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 841 ; free virtual = 26207
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 841 ; free virtual = 26207
+Ending Netlist Obfuscation Task | Checksum: f3d78d3d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 841 ; free virtual = 26207
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+# dump_statistics
+181
+Command: report_power -return_string
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+1 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# report_utilization -file $outputDir/post_opt_design_util.rpt
+# place_design -directive Explore
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 806 ; free virtual = 26172
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 26be55c9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 806 ; free virtual = 26172
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 806 ; free virtual = 26172
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 26be55c9
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 837 ; free virtual = 26203
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 104b758f3
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 837 ; free virtual = 26203
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 104b758f3
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 837 ; free virtual = 26203
+Phase 1 Placer Initialization | Checksum: 104b758f3
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 837 ; free virtual = 26202
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 104b758f3
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 836 ; free virtual = 26201
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 104b758f3
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 836 ; free virtual = 26201
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 104b758f3
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 836 ; free virtual = 26201
+
+Phase 2.4 Global Placement Core
+WARNING: [Place 46-29] place_design is not in timing mode. Skip physical synthesis in placer
+Phase 2.4 Global Placement Core | Checksum: 64db4003
+
+Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 831 ; free virtual = 26196
+Phase 2 Global Placement | Checksum: 64db4003
+
+Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 831 ; free virtual = 26196
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 64db4003
+
+Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 831 ; free virtual = 26196
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: e70aed40
+
+Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.61 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 831 ; free virtual = 26196
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 92c5d4dc
+
+Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 831 ; free virtual = 26196
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 92c5d4dc
+
+Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 831 ; free virtual = 26196
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+Phase 3 Detail Placement | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.72 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.72 ; elapsed = 00:00:00.88 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+Phase 4.3 Placer Reporting | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1f2970bab
+
+Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+Ending Placer Task | Checksum: 1088c9978
+
+Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 827 ; free virtual = 26194
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+# report_clock_utilization -file $outputDir/clock_util.rpt
+# if {[get_property SLACK [get_timing_paths -max_paths 1 -nworst 1 -setup]] < 0.5} {
+#   puts "Found setup timing violations => running physical optimization"
+#   phys_opt_design
+# }
+Found setup timing violations => running physical optimization
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-235] No timing constraint found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+3 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+# write_checkpoint -force $outputDir/post_place.dcp
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 804 ; free virtual = 26173
+INFO: [Common 17-1381] The checkpoint '/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/post_place.dcp' has been generated.
+# report_utilization -file $outputDir/post_place_util.rpt
+# report_timing_summary -file $outputDir/post_place_timing_summary.rpt
+# dump_statistics
+0
+Command: report_power -return_string
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# route_design -directive Explore
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+Checksum: PlaceDB: e1ce43af ConstDB: 0 ShapeSum: 26be55c9 RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-198] Port "in2[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in2[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in2[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in2[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in2[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in2[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in2[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in2[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in2[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "in1[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "in1[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: eb3cdb25
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 666 ; free virtual = 26037
+Post Restoration Checksum: NetGraph: eca3f44 NumContArr: dc729be1 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: eb3cdb25
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 663 ; free virtual = 26033
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: eb3cdb25
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 663 ; free virtual = 26033
+ Number of Nodes with overlaps = 0
+Phase 2 Router Initialization | Checksum: a3f66116
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 659 ; free virtual = 26029
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 205
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 205
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: a3f66116
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 659 ; free virtual = 26030
+Phase 3 Initial Routing | Checksum: 114882b05
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 658 ; free virtual = 26029
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 29
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: 10b841a31
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 658 ; free virtual = 26029
+Phase 4 Rip-up And Reroute | Checksum: 10b841a31
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 658 ; free virtual = 26029
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: 10b841a31
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 658 ; free virtual = 26029
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: 10b841a31
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 658 ; free virtual = 26029
+Phase 6 Post Hold Fix | Checksum: 10b841a31
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 658 ; free virtual = 26029
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0203997 %
+  Global Horizontal Routing Utilization  = 0.0229885 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 13.5135%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 17.1171%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 23.5294%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 16.1765%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 10b841a31
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 658 ; free virtual = 26029
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 10b841a31
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 657 ; free virtual = 26028
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 4c43148d
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 657 ; free virtual = 26028
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 737 ; free virtual = 26108
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+7 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2804.016 ; gain = 0.000 ; free physical = 737 ; free virtual = 26108
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+# write_checkpoint -force $outputDir/post_route.dcp
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2806.984 ; gain = 0.000 ; free physical = 739 ; free virtual = 26112
+INFO: [Common 17-1381] The checkpoint '/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/post_route.dcp' has been generated.
+# report_route_status -file $outputDir/post_route_status.rpt
+# report_timing_summary -file $outputDir/post_route_timing_summary.rpt
+# report_power -file $outputDir/post_route_power.rpt
+Command: report_power -file HLS_output//Synthesis/vivado_flow/post_route_power.rpt
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# report_drc -file $outputDir/post_imp_drc.rpt
+Command: report_drc -file HLS_output//Synthesis/vivado_flow/post_imp_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/raul/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/post_imp_drc.rpt.
+report_drc completed successfully
+# report_utilization -file $outputDir/post_route_util.rpt
+# dump_statistics
+0
+Command: report_power -return_string
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# close_design
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 10 19:11:48 2021...

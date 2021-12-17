@@ -1,0 +1,152 @@
+ 
+****************************************
+Report : area
+Design : posit_add
+Version: O-2018.06-SP4
+Date   : Fri Dec 10 17:13:44 2021
+****************************************
+
+Library(s) Used:
+
+    tcbn45gsbwp12tml (File: /home/ramuri01/synLibs/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db)
+
+Number of ports:                         1482
+Number of nets:                          2728
+Number of cells:                         1332
+Number of combinational cells:           1255
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                        265
+Number of references:                      46
+
+Combinational area:               2231.577620
+Buf/Inv area:                      186.984006
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  2231.577620
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------
+posit_add                         2231.5776    100.0   494.3904     0.0000  0.0000  posit_add
+dsl1                               119.0112      5.3   119.0112     0.0000  0.0000  DSR_left_N_S_16_00000004_2
+dsr1                               110.0736      4.9   110.0736     0.0000  0.0000  DSR_right_N_S_16_00000004
+dsr2                               417.2448     18.7   417.2448     0.0000  0.0000  DSR_right_N_S_51_00000004
+l2                                  68.2080      3.1     0.0000     0.0000  0.0000  LOD_N_N16_2
+l2/l1                               68.2080      3.1     9.8784     0.0000  0.0000  LOD_N16_2
+l2/l1/genblk1.h                     29.1648      1.3     7.5264     0.0000  0.0000  LOD_N8_4
+l2/l1/genblk1.h/genblk1.h           10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_8
+l2/l1/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_16
+l2/l1/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_17
+l2/l1/genblk1.h/genblk1.l           10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_9
+l2/l1/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_18
+l2/l1/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_19
+l2/l1/genblk1.l                     29.1648      1.3     7.5264     0.0000  0.0000  LOD_N8_5
+l2/l1/genblk1.l/genblk1.h           10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_10
+l2/l1/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_20
+l2/l1/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_21
+l2/l1/genblk1.l/genblk1.l           10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_11
+l2/l1/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_22
+l2/l1/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_23
+sub3                                43.9824      2.0     0.7056     0.0000  0.0000  sub_N_00000007_0
+sub3/s1                             43.2768      1.9     0.7056     0.0000  0.0000  sub_N_in_00000007_0
+sub3/s1/sub_218                     42.5712      1.9    42.5712     0.0000  0.0000  sub_N_in_00000007_0_DW01_sub_0
+uut_abs_regime1                     15.0528      0.7    15.0528     0.0000  0.0000  abs_regime_00000004_1
+uut_abs_regime2                     15.0528      0.7    15.0528     0.0000  0.0000  abs_regime_00000004_0
+uut_add_mantovf                     25.6368      1.1    25.6368     0.0000  0.0000  add_1_00000007
+uut_add_sub_N                      254.9568     11.4    39.9840     0.0000  0.0000  add_sub_N_N16
+uut_add_sub_N/a11                  101.3712      4.5     0.7056     0.0000  0.0000  add_N_N16_0
+uut_add_sub_N/a11/a1               100.6656      4.5     0.7056     0.0000  0.0000  add_N_in_N16_0
+uut_add_sub_N/a11/a1/add_226        99.9600      4.5    99.9600     0.0000  0.0000  add_N_in_N16_0_DW01_add_0
+uut_add_sub_N/s11                  113.6016      5.1     0.7056     0.0000  0.0000  sub_N_N16
+uut_add_sub_N/s11/s1               112.8960      5.1     0.7056     0.0000  0.0000  sub_N_in_N16
+uut_add_sub_N/s11/s1/sub_218       112.1904      5.0   112.1904     0.0000  0.0000  sub_N_in_N16_DW01_sub_0
+uut_add_ulp                         95.2560      4.3     0.7056     0.0000  0.0000  add_N_N16_1
+uut_add_ulp/a1                      94.5504      4.2     0.7056     0.0000  0.0000  add_N_in_N16_1
+uut_add_ulp/a1/add_226              93.8448      4.2    93.8448     0.0000  0.0000  add_N_in_N16_1_DW01_add_0
+uut_de1                            236.3760     10.6    49.1568     0.0000  0.0000  data_extract_v1_N16_es2_1
+uut_de1/ls                         119.0112      5.3   119.0112     0.0000  0.0000  DSR_left_N_S_16_00000004_1
+uut_de1/xinst_k                     68.2080      3.1     0.0000     0.0000  0.0000  LOD_N_N16_1
+uut_de1/xinst_k/l1                  68.2080      3.1     9.8784     0.0000  0.0000  LOD_N16_1
+uut_de1/xinst_k/l1/genblk1.h        29.1648      1.3     7.5264     0.0000  0.0000  LOD_N8_2
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_4
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_8
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_9
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_5
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_10
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_11
+uut_de1/xinst_k/l1/genblk1.l        29.1648      1.3     7.5264     0.0000  0.0000  LOD_N8_3
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_6
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_12
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_13
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_7
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_14
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_15
+uut_de2                            236.3760     10.6    49.1568     0.0000  0.0000  data_extract_v1_N16_es2_0
+uut_de2/ls                         119.0112      5.3   119.0112     0.0000  0.0000  DSR_left_N_S_16_00000004_0
+uut_de2/xinst_k                     68.2080      3.1     0.0000     0.0000  0.0000  LOD_N_N16_0
+uut_de2/xinst_k/l1                  68.2080      3.1     9.8784     0.0000  0.0000  LOD_N16_0
+uut_de2/xinst_k/l1/genblk1.h        29.1648      1.3     7.5264     0.0000  0.0000  LOD_N8_0
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_0
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_0
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_1
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_1
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_2
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_3
+uut_de2/xinst_k/l1/genblk1.l        29.1648      1.3     7.5264     0.0000  0.0000  LOD_N8_1
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_2
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_4
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_5
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l
+                                    10.8192      0.5     5.1744     0.0000  0.0000  LOD_N4_3
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_6
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_7
+uut_ediff                           44.6880      2.0     0.7056     0.0000  0.0000  sub_N_00000007_1
+uut_ediff/s1                        43.9824      2.0     0.7056     0.0000  0.0000  sub_N_in_00000007_1
+uut_ediff/s1/sub_218                43.2768      1.9    43.2768     0.0000  0.0000  sub_N_in_00000007_1_DW01_sub_0
+uut_reg_ro                          55.2720      2.5    31.9872     0.0000  0.0000  reg_exp_op_2_00000004
+uut_reg_ro/uut_conv_2c1             23.2848      1.0     0.0000     0.0000  0.0000  conv_2c_00000006
+uut_reg_ro/uut_conv_2c1/add_266     23.2848      1.0    23.2848     0.0000  0.0000  conv_2c_00000006_DW01_inc_0
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------
+Total                                                 2231.5776     0.0000  0.0000
+
+1

@@ -1,0 +1,94 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : posit_add
+Version: O-2018.06-SP4
+Date   : Fri Dec 10 17:09:50 2021
+****************************************
+
+
+Library(s) Used:
+
+    tcbn45gsbwp12tml (File: /home/ramuri01/synLibs/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db)
+
+
+Operating Conditions: MLCOM   Library: tcbn45gsbwp12tml
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+posit_add              ZeroWireload      tcbn45gsbwp12tml
+
+
+Global Operating Voltage = 0.99 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+posit_add                                 0.108    0.268 8.00e+05    1.175 100.0
+  uut_add_ulp (add_N_N8_1)             1.21e-03 1.73e-02 6.61e+04 8.46e-02   7.2
+    a1 (add_N_in_N8_1)                 1.21e-03 1.73e-02 6.61e+04 8.46e-02   7.2
+      add_226 (add_N_in_N8_1_DW01_add_0)
+                                       1.21e-03 1.73e-02 6.61e+04 8.46e-02   7.2
+  dsr2 (DSR_right_N_S_27_00000003)     1.33e-02 3.35e-02 5.97e+04    0.107   9.1
+  uut_reg_ro (reg_exp_op_2_00000003)   7.26e-03 1.19e-02 4.16e+04 6.08e-02   5.2
+    uut_conv_2c1 (conv_2c_00000005)    8.66e-04 5.35e-03 1.86e+04 2.48e-02   2.1
+  uut_add_mantovf (add_1_00000006)     2.22e-03 5.52e-03 2.16e+04 2.93e-02   2.5
+  sub3 (sub_N_00000006_0)              2.44e-03 1.03e-02 2.61e+04 3.89e-02   3.3
+    s1 (sub_N_in_00000006_0)           2.44e-03 1.03e-02 2.61e+04 3.89e-02   3.3
+  dsl1 (DSR_left_N_S_8_00000003_2)     5.38e-03 1.09e-02 2.64e+04 4.27e-02   3.6
+  l2 (LOD_N_N8_2)                      2.63e-03 6.32e-03 2.09e+04 2.98e-02   2.5
+    l1 (LOD_N8_2)                      2.63e-03 6.32e-03 2.09e+04 2.98e-02   2.5
+      genblk1.h (LOD_N4_4)             5.46e-04 2.19e-03 7.21e+03 9.95e-03   0.8
+        genblk1.h (LOD_N2_8)           1.25e-04 4.74e-04 1.70e+03 2.30e-03   0.2
+        genblk1.l (LOD_N2_9)           3.20e-04 8.71e-04 2.04e+03 3.23e-03   0.3
+      genblk1.l (LOD_N4_5)             1.17e-03 3.20e-03 8.22e+03 1.26e-02   1.1
+        genblk1.h (LOD_N2_10)          4.89e-04 8.22e-04 2.07e+03 3.38e-03   0.3
+        genblk1.l (LOD_N2_11)          3.31e-04 8.28e-04 2.15e+03 3.31e-03   0.3
+  uut_add_sub_N (add_sub_N_N8)         8.41e-03 4.55e-02 1.77e+05    0.231  19.7
+    s11 (sub_N_N8)                     3.75e-03 1.58e-02 8.41e+04    0.104   8.8
+      s1 (sub_N_in_N8)                 3.75e-03 1.58e-02 8.41e+04    0.104   8.8
+        sub_218 (sub_N_in_N8_DW01_sub_0)
+                                       3.75e-03 1.58e-02 8.41e+04    0.104   8.8
+    a11 (add_N_N8_0)                   1.18e-03 2.07e-02 7.40e+04 9.59e-02   8.2
+      a1 (add_N_in_N8_0)               1.18e-03 2.07e-02 7.40e+04 9.59e-02   8.2
+        add_226 (add_N_in_N8_0_DW01_add_0)
+                                       1.18e-03 2.07e-02 7.40e+04 9.59e-02   8.2
+  dsr1 (DSR_right_N_S_8_00000003)      6.09e-03 1.22e-02 1.94e+04 3.77e-02   3.2
+  uut_ediff (sub_N_00000006_1)         2.95e-03 1.21e-02 2.69e+04 4.20e-02   3.6
+    s1 (sub_N_in_00000006_1)           2.95e-03 1.21e-02 2.69e+04 4.20e-02   3.6
+  uut_abs_regime2 (abs_regime_00000003_0)
+                                       7.32e-04 2.91e-03 1.06e+04 1.42e-02   1.2
+  uut_abs_regime1 (abs_regime_00000003_1)
+                                       1.88e-03 2.84e-03 9.56e+03 1.43e-02   1.2
+  uut_de2 (data_extract_v1_N8_es2_0)   7.90e-03 1.84e-02 7.18e+04 9.81e-02   8.3
+    ls (DSR_left_N_S_8_00000003_0)     3.68e-03 7.08e-03 2.30e+04 3.38e-02   2.9
+    xinst_k (LOD_N_N8_0)               2.90e-03 4.74e-03 2.25e+04 3.01e-02   2.6
+      l1 (LOD_N8_0)                    2.90e-03 4.74e-03 2.25e+04 3.01e-02   2.6
+        genblk1.h (LOD_N4_0)           8.19e-04 1.76e-03 8.81e+03 1.14e-02   1.0
+          genblk1.h (LOD_N2_0)         3.17e-04 4.65e-04 2.59e+03 3.37e-03   0.3
+          genblk1.l (LOD_N2_1)         1.68e-04 4.39e-04 2.03e+03 2.63e-03   0.2
+        genblk1.l (LOD_N4_1)           6.04e-04 1.87e-03 7.85e+03 1.03e-02   0.9
+          genblk1.h (LOD_N2_2)         2.91e-04 5.00e-04 2.03e+03 2.82e-03   0.2
+          genblk1.l (LOD_N2_3)         1.51e-04 5.26e-04 2.03e+03 2.71e-03   0.2
+  uut_de1 (data_extract_v1_N8_es2_1)   7.94e-03 1.84e-02 7.18e+04 9.82e-02   8.4
+    ls (DSR_left_N_S_8_00000003_1)     3.69e-03 7.14e-03 2.30e+04 3.38e-02   2.9
+    xinst_k (LOD_N_N8_1)               2.92e-03 4.74e-03 2.25e+04 3.02e-02   2.6
+      l1 (LOD_N8_1)                    2.92e-03 4.74e-03 2.25e+04 3.02e-02   2.6
+        genblk1.h (LOD_N4_2)           8.13e-04 1.75e-03 8.81e+03 1.14e-02   1.0
+          genblk1.h (LOD_N2_4)         3.16e-04 4.63e-04 2.59e+03 3.37e-03   0.3
+          genblk1.l (LOD_N2_5)         1.65e-04 4.35e-04 2.03e+03 2.63e-03   0.2
+        genblk1.l (LOD_N4_3)           6.06e-04 1.86e-03 7.85e+03 1.03e-02   0.9
+          genblk1.h (LOD_N2_6)         2.91e-04 4.99e-04 2.04e+03 2.83e-03   0.2
+          genblk1.l (LOD_N2_7)         1.51e-04 5.19e-04 2.02e+03 2.69e-03   0.2
+1

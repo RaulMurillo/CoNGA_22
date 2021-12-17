@@ -1,0 +1,251 @@
+ 
+****************************************
+Report : area
+Design : posit_add
+Version: O-2018.06-SP4
+Date   : Fri Dec 10 17:22:57 2021
+****************************************
+
+Library(s) Used:
+
+    tcbn45gsbwp12tml (File: /home/ramuri01/synLibs/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db)
+
+Number of ports:                         3109
+Number of nets:                          5977
+Number of cells:                         3089
+Number of combinational cells:           2961
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                        674
+Number of references:                      44
+
+Combinational area:               5144.764831
+Buf/Inv area:                      475.809616
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  5144.764831
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------
+posit_add                         5144.7648    100.0   738.0576     0.0000  0.0000  posit_add
+dsl1                               313.7568      6.1   313.7568     0.0000  0.0000  DSR_left_N_S_32_00000005_2
+dsr1                               309.9936      6.0   309.9936     0.0000  0.0000  DSR_right_N_S_32_00000005
+dsr2                              1166.8272     22.7  1166.8272     0.0000  0.0000  DSR_right_N_S_99_00000005
+l2                                 148.6464      2.9     0.0000     0.0000  0.0000  LOD_N_N32_2
+l2/l1                              148.6464      2.9    12.2304     0.0000  0.0000  LOD_N32_2
+l2/l1/genblk1.h                     68.2080      1.3     9.8784     0.0000  0.0000  LOD_N16_4
+l2/l1/genblk1.h/genblk1.h           29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_8
+l2/l1/genblk1.h/genblk1.h/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_16
+l2/l1/genblk1.h/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_32
+l2/l1/genblk1.h/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_33
+l2/l1/genblk1.h/genblk1.h/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_17
+l2/l1/genblk1.h/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_34
+l2/l1/genblk1.h/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_35
+l2/l1/genblk1.h/genblk1.l           29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_9
+l2/l1/genblk1.h/genblk1.l/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_18
+l2/l1/genblk1.h/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_36
+l2/l1/genblk1.h/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_37
+l2/l1/genblk1.h/genblk1.l/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_19
+l2/l1/genblk1.h/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_38
+l2/l1/genblk1.h/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_39
+l2/l1/genblk1.l                     68.2080      1.3     9.8784     0.0000  0.0000  LOD_N16_5
+l2/l1/genblk1.l/genblk1.h           29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_10
+l2/l1/genblk1.l/genblk1.h/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_20
+l2/l1/genblk1.l/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_40
+l2/l1/genblk1.l/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_41
+l2/l1/genblk1.l/genblk1.h/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_21
+l2/l1/genblk1.l/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_42
+l2/l1/genblk1.l/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_43
+l2/l1/genblk1.l/genblk1.l           29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_11
+l2/l1/genblk1.l/genblk1.l/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_22
+l2/l1/genblk1.l/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_44
+l2/l1/genblk1.l/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_45
+l2/l1/genblk1.l/genblk1.l/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_23
+l2/l1/genblk1.l/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_46
+l2/l1/genblk1.l/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_47
+sub3                                50.8032      1.0     0.7056     0.0000  0.0000  sub_N_00000008_0
+sub3/s1                             50.0976      1.0     0.7056     0.0000  0.0000  sub_N_in_00000008_0
+sub3/s1/sub_218                     49.3920      1.0    49.3920     0.0000  0.0000  sub_N_in_00000008_0_DW01_sub_0
+sub_148                            143.9424      2.8   143.9424     0.0000  0.0000  posit_add_DW01_sub_0
+sub_40                             143.9424      2.8   143.9424     0.0000  0.0000  posit_add_DW01_sub_2
+sub_41                             143.9424      2.8   143.9424     0.0000  0.0000  posit_add_DW01_sub_1
+uut_abs_regime1                     19.2864      0.4    19.2864     0.0000  0.0000  abs_regime_00000005_1
+uut_abs_regime2                     19.2864      0.4    19.2864     0.0000  0.0000  abs_regime_00000005_0
+uut_add_mantovf                     29.1648      0.6    29.1648     0.0000  0.0000  add_1_00000008
+uut_add_sub_N                      499.5648      9.7    77.6160     0.0000  0.0000  add_sub_N_N32
+uut_add_sub_N/a11                  199.2144      3.9     0.7056     0.0000  0.0000  add_N_N32_0
+uut_add_sub_N/a11/a1               198.5088      3.9     0.7056     0.0000  0.0000  add_N_in_N32_0
+uut_add_sub_N/a11/a1/add_226       197.8032      3.8   197.8032     0.0000  0.0000  add_N_in_N32_0_DW01_add_0
+uut_add_sub_N/s11                  222.7344      4.3     0.7056     0.0000  0.0000  sub_N_N32
+uut_add_sub_N/s11/s1               222.0288      4.3     0.7056     0.0000  0.0000  sub_N_in_N32
+uut_add_sub_N/s11/s1/sub_218       221.3232      4.3   221.3232     0.0000  0.0000  sub_N_in_N32_DW01_sub_0
+uut_add_ulp                        193.0992      3.8     0.7056     0.0000  0.0000  add_N_N32_1
+uut_add_ulp/a1                     192.3936      3.7     0.7056     0.0000  0.0000  add_N_in_N32_1
+uut_add_ulp/a1/add_226             191.6880      3.7   191.6880     0.0000  0.0000  add_N_in_N32_1_DW01_add_0
+uut_de1                            554.1312     10.8    93.1392     0.0000  0.0000  data_extract_v1_N32_es2_1
+uut_de1/ls                         312.3456      6.1   312.3456     0.0000  0.0000  DSR_left_N_S_32_00000005_1
+uut_de1/xinst_k                    148.6464      2.9     0.0000     0.0000  0.0000  LOD_N_N32_1
+uut_de1/xinst_k/l1                 148.6464      2.9    12.2304     0.0000  0.0000  LOD_N32_1
+uut_de1/xinst_k/l1/genblk1.h        68.2080      1.3     9.8784     0.0000  0.0000  LOD_N16_2
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_4
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_8
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_16
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_17
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_9
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_18
+uut_de1/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_19
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_5
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_10
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_20
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_21
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_11
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_22
+uut_de1/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_23
+uut_de1/xinst_k/l1/genblk1.l        68.2080      1.3     9.8784     0.0000  0.0000  LOD_N16_3
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_6
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_12
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_24
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_25
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_13
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_26
+uut_de1/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_27
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_7
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_14
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_28
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_29
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_15
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_30
+uut_de1/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_31
+uut_de2                            554.1312     10.8    93.1392     0.0000  0.0000  data_extract_v1_N32_es2_0
+uut_de2/ls                         312.3456      6.1   312.3456     0.0000  0.0000  DSR_left_N_S_32_00000005_0
+uut_de2/xinst_k                    148.6464      2.9     0.0000     0.0000  0.0000  LOD_N_N32_0
+uut_de2/xinst_k/l1                 148.6464      2.9    12.2304     0.0000  0.0000  LOD_N32_0
+uut_de2/xinst_k/l1/genblk1.h        68.2080      1.3     9.8784     0.0000  0.0000  LOD_N16_0
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_0
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_0
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_0
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_1
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_1
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_2
+uut_de2/xinst_k/l1/genblk1.h/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_3
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_1
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_2
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_4
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_5
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_3
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_6
+uut_de2/xinst_k/l1/genblk1.h/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_7
+uut_de2/xinst_k/l1/genblk1.l        68.2080      1.3     9.8784     0.0000  0.0000  LOD_N16_1
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_2
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_4
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_8
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_9
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_5
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_10
+uut_de2/xinst_k/l1/genblk1.l/genblk1.h/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_11
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l
+                                    29.1648      0.6     7.5264     0.0000  0.0000  LOD_N8_3
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_6
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_12
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.h/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_13
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l
+                                    10.8192      0.2     5.1744     0.0000  0.0000  LOD_N4_7
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l/genblk1.h
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_14
+uut_de2/xinst_k/l1/genblk1.l/genblk1.l/genblk1.l/genblk1.l
+                                     2.8224      0.1     2.8224     0.0000  0.0000  LOD_N2_15
+uut_ediff                           51.5088      1.0     0.7056     0.0000  0.0000  sub_N_00000008_1
+uut_ediff/s1                        50.8032      1.0     0.7056     0.0000  0.0000  sub_N_in_00000008_1
+uut_ediff/s1/sub_218                50.0976      1.0    50.0976     0.0000  0.0000  sub_N_in_00000008_1_DW01_sub_0
+uut_reg_ro                          64.6800      1.3    37.3968     0.0000  0.0000  reg_exp_op_2_00000005
+uut_reg_ro/uut_conv_2c1             27.2832      0.5     0.0000     0.0000  0.0000  conv_2c_00000007
+uut_reg_ro/uut_conv_2c1/add_266     27.2832      0.5    27.2832     0.0000  0.0000  conv_2c_00000007_DW01_inc_0
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------
+Total                                                 5144.7648     0.0000  0.0000
+
+1

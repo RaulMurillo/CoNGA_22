@@ -1,0 +1,90 @@
+Loading db file '/home/ramuri01/synLibs/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: The net 'in1[15]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[14]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[13]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[12]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[11]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[10]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[9]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[8]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[7]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[6]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[5]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[4]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[3]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[2]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in1[1]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[15]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[14]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[13]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[12]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[11]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[10]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[9]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[8]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[7]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[6]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[5]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[4]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[3]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[2]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'in2[1]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'done' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'uut_de1/ls/a[2]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+Warning: The net 'uut_de2/ls/a[2]' is annotated with a toggle rate but no static probability. A default static probability value of 0.500000 is used. (PWR-419)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : posit_add
+Version: O-2018.06-SP4
+Date   : Fri Dec 10 17:13:52 2021
+****************************************
+
+
+Library(s) Used:
+
+    tcbn45gsbwp12tml (File: /home/ramuri01/synLibs/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db)
+
+
+Operating Conditions: MLCOM   Library: tcbn45gsbwp12tml
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+posit_add              ZeroWireload      tcbn45gsbwp12tml
+
+
+Global Operating Voltage = 0.99 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 644.7826 uW   (73%)
+  Net Switching Power  = 241.6594 uW   (27%)
+                         ---------
+Total Dynamic Power    = 886.4420 uW  (100%)
+
+Cell Leakage Power     =   1.5965 mW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.6448            0.2417        1.5964e+06            2.4828  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total              0.6448 mW         0.2417 mW     1.5964e+06 nW         2.4828 mW
+1

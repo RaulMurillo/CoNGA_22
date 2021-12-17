@@ -1,0 +1,337 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Fri Dec 10 20:12:55 2021
+| Host         : raul-pop-os running 64-bit Pop!_OS 20.10
+| Command      : report_timing_summary -file HLS_output//Synthesis/vivado_flow/post_route_timing_summary.rpt
+| Design       : posit_add
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+-------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -8.795      -66.087                      8                    8       10.840        0.000                      0                    8           NA           NA                      NA                    NA  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock     Waveform(ns)       Period(ns)      Frequency(MHz)
+-----     ------------       ----------      --------------
+clk_virt  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_virt           -8.795      -66.087                      8                    8       10.840        0.000                      0                    8                                                                          
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_virt
+  To Clock:  clk_virt
+
+Setup :            8  Failing Endpoints,  Worst Slack       -8.795ns,  Total Violation      -66.087ns
+Hold  :            0  Failing Endpoints,  Worst Slack       10.840ns,  Total Violation        0.000ns
+PW    :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -8.795ns  (required time - arrival time)
+  Source:                 in1[4]
+                            (input port clocked by clk_virt  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            out[4]
+                            (output port clocked by clk_virt  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_virt
+  Path Type:              Max at Slow Process Corner
+  Requirement:            20.000ns  (clk_virt rise@20.000ns - clk_virt rise@0.000ns)
+  Data Path Delay:        18.770ns  (logic 4.189ns (22.317%)  route 14.581ns (77.683%))
+  Logic Levels:           21  (CARRY4=4 LUT3=1 LUT4=4 LUT5=4 LUT6=8)
+  Input Delay:            5.000ns
+  Output Delay:           5.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_virt rise edge)
+                                                      0.000     0.000 r  
+                         ideal clock network latency
+                                                      0.000     0.000    
+                         input delay                  5.000     5.000    
+                                                      0.000     5.000 r  in1[4] (IN)
+                         net (fo=3, unset)            0.973     5.973    uut_add_sub_N/s11/s1/in1[4]
+    SLICE_X34Y48         LUT5 (Prop_lut5_I4_O)        0.124     6.097 r  uut_add_sub_N/s11/s1/out[7]_INST_0_i_5/O
+                         net (fo=8, routed)           0.337     6.434    uut_add_sub_N/s11/s1/in1[2]_0
+    SLICE_X35Y50         LUT3 (Prop_lut3_I1_O)        0.124     6.558 f  uut_add_sub_N/s11/s1/out[7]_INST_0_i_35/O
+                         net (fo=3, routed)           0.448     7.007    uut_add_sub_N/s11/s1/in1[7]_8
+    SLICE_X33Y51         LUT6 (Prop_lut6_I2_O)        0.124     7.131 r  uut_add_sub_N/s11/s1/out[7]_INST_0_i_14_comp/O
+                         net (fo=1, routed)           0.330     7.461    uut_add_sub_N/s11/s1/out[7]_INST_0_i_14_n_0
+    SLICE_X32Y51         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.404     7.865 r  uut_add_sub_N/s11/s1/out[7]_INST_0_i_4/CO[3]
+                         net (fo=42, routed)          0.939     8.804    uut_add_sub_N/s11/s1/in1[6][0]
+    SLICE_X32Y50         LUT5 (Prop_lut5_I3_O)        0.124     8.928 r  uut_add_sub_N/s11/s1/c_carry_i_13__0/O
+                         net (fo=5, routed)           0.536     9.464    uut_ediff/s1/c_carry_4
+    SLICE_X33Y50         LUT6 (Prop_lut6_I5_O)        0.124     9.588 r  uut_ediff/s1/c_carry_i_1__0/O
+                         net (fo=1, routed)           0.707    10.295    uut_ediff/s1/regime_N[1]
+    SLICE_X31Y49         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385    10.680 r  uut_ediff/s1/c_carry/CO[3]
+                         net (fo=1, routed)           0.001    10.680    uut_ediff/s1/c_carry_n_0
+    SLICE_X31Y50         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.014 f  uut_ediff/s1/c_carry__0/O[1]
+                         net (fo=21, routed)          0.761    11.775    uut_ediff/s1/c_carry__0_n_6
+    SLICE_X31Y48         LUT4 (Prop_lut4_I2_O)        0.303    12.078 r  uut_ediff/s1/c_carry_i_19__0/O
+                         net (fo=7, routed)           0.494    12.572    uut_ediff/s1/c_carry_i_19__0_n_0
+    SLICE_X28Y49         LUT6 (Prop_lut6_I3_O)        0.124    12.696 r  uut_ediff/s1/c_carry_i_9/O
+                         net (fo=7, routed)           0.590    13.287    uut_ediff/s1/c_carry_i_9_n_0
+    SLICE_X31Y48         LUT4 (Prop_lut4_I2_O)        0.124    13.411 r  uut_ediff/s1/c_carry_i_1/O
+                         net (fo=4, routed)           0.542    13.952    uut_add_sub_N/s11/s1/out[7]_INST_0_i_27
+    SLICE_X30Y49         CARRY4 (Prop_carry4_CYINIT_O[2])
+                                                      0.602    14.554 r  uut_add_sub_N/s11/s1/c_carry/O[2]
+                         net (fo=2, routed)           1.023    15.578    uut_add_sub_N/s11/s1/c_carry__0_i_6__0[2]
+    SLICE_X30Y53         LUT4 (Prop_lut4_I0_O)        0.301    15.879 r  uut_add_sub_N/s11/s1/out[7]_INST_0_i_31/O
+                         net (fo=6, routed)           1.190    17.068    uut_ediff/s1/out[6]_INST_0_i_48_1
+    SLICE_X26Y52         LUT6 (Prop_lut6_I1_O)        0.124    17.192 r  uut_ediff/s1/out[7]_INST_0_i_30/O
+                         net (fo=16, routed)          0.426    17.618    uut_ediff/s1/in1[7]_0
+    SLICE_X28Y53         LUT6 (Prop_lut6_I2_O)        0.124    17.742 f  uut_ediff/s1/out[6]_INST_0_i_30/O
+                         net (fo=3, routed)           0.706    18.448    uut_ediff/s1/out[6]_INST_0_i_30_n_0
+    SLICE_X28Y52         LUT6 (Prop_lut6_I0_O)        0.124    18.572 r  uut_ediff/s1/out[6]_INST_0_i_8/O
+                         net (fo=17, routed)          1.025    19.597    uut_ediff/s1/out[6]_INST_0_i_8_n_0
+    SLICE_X28Y51         LUT5 (Prop_lut5_I0_O)        0.124    19.721 f  uut_ediff/s1/out[6]_INST_0_i_18/O
+                         net (fo=4, routed)           0.685    20.407    uut_ediff/s1/out[6]_INST_0_i_18_n_0
+    SLICE_X29Y51         LUT5 (Prop_lut5_I0_O)        0.124    20.531 f  uut_ediff/s1/out[6]_INST_0_i_14/O
+                         net (fo=9, routed)           0.808    21.339    uut_ediff/s1/out[6]_INST_0_i_14_n_0
+    SLICE_X27Y51         LUT4 (Prop_lut4_I1_O)        0.124    21.463 r  uut_ediff/s1/out[6]_INST_0_i_20/O
+                         net (fo=3, routed)           0.642    22.104    uut_ediff/s1/out[6]_INST_0_i_20_n_0
+    SLICE_X26Y50         LUT6 (Prop_lut6_I5_O)        0.124    22.228 r  uut_ediff/s1/out[4]_INST_0_i_1/O
+                         net (fo=2, routed)           0.445    22.673    uut_ediff/s1/out[4]_INST_0_i_1_n_0
+    SLICE_X27Y52         LUT6 (Prop_lut6_I3_O)        0.124    22.797 r  uut_ediff/s1/out[4]_INST_0/O
+                         net (fo=0)                   0.973    23.770    out[4]
+                                                                      r  out[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_virt rise edge)
+                                                     20.000    20.000 r  
+                         ideal clock network latency
+                                                      0.000    20.000    
+                         clock pessimism              0.000    20.000    
+                         clock uncertainty           -0.025    19.975    
+                         output delay                -5.000    14.975    
+  -------------------------------------------------------------------
+                         required time                         14.975    
+                         arrival time                         -23.770    
+  -------------------------------------------------------------------
+                         slack                                 -8.795    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             10.840ns  (arrival time - required time)
+  Source:                 in1[7]
+                            (input port clocked by clk_virt  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            out[0]
+                            (output port clocked by clk_virt  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_virt
+  Path Type:              Min at Fast Process Corner
+  Requirement:            0.000ns  (clk_virt rise@0.000ns - clk_virt rise@0.000ns)
+  Data Path Delay:        0.865ns  (logic 0.045ns (5.201%)  route 0.820ns (94.799%))
+  Logic Levels:           1  (LUT6=1)
+  Input Delay:            5.000ns
+  Output Delay:           5.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_virt rise edge)
+                                                      0.000     0.000 r  
+                         ideal clock network latency
+                                                      0.000     0.000    
+                         input delay                  5.000     5.000    
+                                                      0.000     5.000 r  in1[7] (IN)
+                         net (fo=42, unset)           0.410     5.410    uut_ediff/s1/in1[7]
+    SLICE_X29Y55         LUT6 (Prop_lut6_I5_O)        0.045     5.455 r  uut_ediff/s1/out[0]_INST_0/O
+                         net (fo=0)                   0.410     5.865    out[0]
+                                                                      r  out[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_virt rise edge)
+                                                      0.000     0.000 r  
+                         ideal clock network latency
+                                                      0.000     0.000    
+                         clock pessimism              0.000     0.000    
+                         clock uncertainty            0.025     0.025    
+                         output delay                -5.000    -4.975    
+  -------------------------------------------------------------------
+                         required time                          4.975    
+                         arrival time                           5.865    
+  -------------------------------------------------------------------
+                         slack                                 10.840    
+
+
+
+
+
+

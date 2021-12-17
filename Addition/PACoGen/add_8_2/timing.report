@@ -1,0 +1,182 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : posit_add
+Version: O-2018.06-SP4
+Date   : Fri Dec 10 17:09:42 2021
+****************************************
+
+Operating Conditions: MLCOM   Library: tcbn45gsbwp12tml
+Wire Load Model Mode: top
+
+  Startpoint: in2[0] (input port)
+  Endpoint: out[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  posit_add          ZeroWireload          tcbn45gsbwp12tml
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  in2[0] (in)                                             0.00       0.00 f
+  U491/ZN (CKND0BWP12T)                                   0.01       0.01 r
+  U490/ZN (CKND2D0BWP12T)                                 0.01       0.02 f
+  U489/ZN (CKND0BWP12T)                                   0.01       0.03 r
+  U487/ZN (CKND2D0BWP12T)                                 0.01       0.04 f
+  U486/ZN (CKND0BWP12T)                                   0.01       0.05 r
+  U484/ZN (CKND2D0BWP12T)                                 0.01       0.06 f
+  U483/ZN (CKND0BWP12T)                                   0.01       0.07 r
+  U481/ZN (CKND2D0BWP12T)                                 0.01       0.09 f
+  U480/ZN (CKND0BWP12T)                                   0.01       0.10 r
+  U478/ZN (CKND2D0BWP12T)                                 0.01       0.11 f
+  U477/ZN (CKND0BWP12T)                                   0.01       0.12 r
+  U476/ZN (NR2D0BWP12T)                                   0.01       0.12 f
+  U475/ZN (MUX2ND0BWP12T)                                 0.02       0.14 r
+  U473/ZN (CKND2D0BWP12T)                                 0.01       0.15 f
+  U392/ZN (CKND0BWP12T)                                   0.05       0.20 r
+  uut_de2/in[6] (data_extract_v1_N8_es2_0)                0.00       0.20 r
+  uut_de2/U3/Z (CKXOR2D0BWP12T)                           0.03       0.23 f
+  uut_de2/xinst_k/in[6] (LOD_N_N8_0)                      0.00       0.23 f
+  uut_de2/xinst_k/l1/in[6] (LOD_N8_0)                     0.00       0.23 f
+  uut_de2/xinst_k/l1/genblk1.h/in[2] (LOD_N4_0)           0.00       0.23 f
+  uut_de2/xinst_k/l1/genblk1.h/genblk1.h/in[0] (LOD_N2_0)
+                                                          0.00       0.23 f
+  uut_de2/xinst_k/l1/genblk1.h/genblk1.h/U1/Z (OR2D0BWP12T)
+                                                          0.02       0.25 f
+  uut_de2/xinst_k/l1/genblk1.h/genblk1.h/vld (LOD_N2_0)
+                                                          0.00       0.25 f
+  uut_de2/xinst_k/l1/genblk1.h/U2/Z (OR2D0BWP12T)         0.03       0.28 f
+  uut_de2/xinst_k/l1/genblk1.h/vld (LOD_N4_0)             0.00       0.28 f
+  uut_de2/xinst_k/l1/U4/Z (CKMUX2D0BWP12T)                0.04       0.31 r
+  uut_de2/xinst_k/l1/out[1] (LOD_N8_0)                    0.00       0.31 r
+  uut_de2/xinst_k/out[1] (LOD_N_N8_0)                     0.00       0.31 r
+  uut_de2/ls/b[1] (DSR_left_N_S_8_00000003_0)             0.00       0.31 r
+  uut_de2/ls/U35/ZN (CKND0BWP12T)                         0.02       0.33 f
+  uut_de2/ls/U33/ZN (CKND2D0BWP12T)                       0.02       0.35 r
+  uut_de2/ls/U17/ZN (CKND0BWP12T)                         0.01       0.36 f
+  uut_de2/ls/U7/ZN (MOAI22D0BWP12T)                       0.02       0.39 f
+  uut_de2/ls/U6/ZN (MUX2ND0BWP12T)                        0.02       0.40 r
+  uut_de2/ls/U5/ZN (OAI21D0BWP12T)                        0.01       0.42 f
+  uut_de2/ls/c[6] (DSR_left_N_S_8_00000003_0)             0.00       0.42 f
+  uut_de2/exp[0] (data_extract_v1_N8_es2_0)               0.00       0.42 f
+  U495/ZN (CKND0BWP12T)                                   0.01       0.43 r
+  U434/ZN (MUX2ND0BWP12T)                                 0.01       0.44 f
+  uut_ediff/a[0] (sub_N_00000006_1)                       0.00       0.44 f
+  uut_ediff/s1/a[0] (sub_N_in_00000006_1)                 0.00       0.44 f
+  uut_ediff/s1/U18/ZN (CKND0BWP12T)                       0.02       0.46 r
+  uut_ediff/s1/U17/ZN (CKND2D0BWP12T)                     0.02       0.47 f
+  uut_ediff/s1/U14/ZN (NR2D0BWP12T)                       0.02       0.49 r
+  uut_ediff/s1/U13/ZN (MOAI22D0BWP12T)                    0.02       0.51 f
+  uut_ediff/s1/U11/ZN (NR2D0BWP12T)                       0.02       0.53 r
+  uut_ediff/s1/U10/ZN (MOAI22D0BWP12T)                    0.02       0.54 f
+  uut_ediff/s1/U7/ZN (NR2D0BWP12T)                        0.02       0.56 r
+  uut_ediff/s1/U6/ZN (MOAI22D0BWP12T)                     0.02       0.58 f
+  uut_ediff/s1/U4/Z (OR2D0BWP12T)                         0.02       0.60 f
+  uut_ediff/s1/U3/ZN (AOI22D0BWP12T)                      0.01       0.61 r
+  uut_ediff/s1/U2/Z (XOR3D0BWP12T)                        0.03       0.64 f
+  uut_ediff/s1/c[5] (sub_N_in_00000006_1)                 0.00       0.64 f
+  uut_ediff/c[5] (sub_N_00000006_1)                       0.00       0.64 f
+  U499/ZN (NR3D0BWP12T)                                   0.03       0.66 r
+  U498/ZN (IND2D0BWP12T)                                  0.05       0.71 f
+  dsr1/b[0] (DSR_right_N_S_8_00000003)                    0.00       0.71 f
+  dsr1/U19/Z (CKMUX2D0BWP12T)                             0.03       0.75 f
+  dsr1/U18/ZN (MUX3ND0BWP12T)                             0.01       0.76 r
+  dsr1/U17/ZN (OAI222D0BWP12T)                            0.04       0.80 f
+  dsr1/c[0] (DSR_right_N_S_8_00000003)                    0.00       0.80 f
+  uut_add_sub_N/b[0] (add_sub_N_N8)                       0.00       0.80 f
+  uut_add_sub_N/s11/b[0] (sub_N_N8)                       0.00       0.80 f
+  uut_add_sub_N/s11/s1/b[0] (sub_N_in_N8)                 0.00       0.80 f
+  uut_add_sub_N/s11/s1/sub_218/B[0] (sub_N_in_N8_DW01_sub_0)
+                                                          0.00       0.80 f
+  uut_add_sub_N/s11/s1/sub_218/U11/ZN (ND2D1BWP12T)       0.01       0.81 r
+  uut_add_sub_N/s11/s1/sub_218/U2_1/CO (FA1D0BWP12T)      0.02       0.84 r
+  uut_add_sub_N/s11/s1/sub_218/U2_2/CO (FA1D0BWP12T)      0.02       0.86 r
+  uut_add_sub_N/s11/s1/sub_218/U2_3/CO (FA1D0BWP12T)      0.02       0.88 r
+  uut_add_sub_N/s11/s1/sub_218/U2_4/CO (FA1D0BWP12T)      0.02       0.91 r
+  uut_add_sub_N/s11/s1/sub_218/U2_5/CO (FA1D0BWP12T)      0.02       0.93 r
+  uut_add_sub_N/s11/s1/sub_218/U2_6/CO (FA1D0BWP12T)      0.02       0.95 r
+  uut_add_sub_N/s11/s1/sub_218/U2_7/CO (FA1D0BWP12T)      0.02       0.98 r
+  uut_add_sub_N/s11/s1/sub_218/U2_8/Z (XOR3D1BWP12T)      0.02       1.00 f
+  uut_add_sub_N/s11/s1/sub_218/DIFF[8] (sub_N_in_N8_DW01_sub_0)
+                                                          0.00       1.00 f
+  uut_add_sub_N/s11/s1/c[8] (sub_N_in_N8)                 0.00       1.00 f
+  uut_add_sub_N/s11/c[8] (sub_N_N8)                       0.00       1.00 f
+  uut_add_sub_N/U1/Z (CKMUX2D0BWP12T)                     0.03       1.03 f
+  uut_add_sub_N/c[8] (add_sub_N_N8)                       0.00       1.03 f
+  U500/Z (OR2D0BWP12T)                                    0.02       1.05 f
+  l2/in[7] (LOD_N_N8_2)                                   0.00       1.05 f
+  l2/l1/in[7] (LOD_N8_2)                                  0.00       1.05 f
+  l2/l1/genblk1.h/in[3] (LOD_N4_4)                        0.00       1.05 f
+  l2/l1/genblk1.h/genblk1.h/in[1] (LOD_N2_8)              0.00       1.05 f
+  l2/l1/genblk1.h/genblk1.h/U1/Z (OR2D0BWP12T)            0.02       1.07 f
+  l2/l1/genblk1.h/genblk1.h/vld (LOD_N2_8)                0.00       1.07 f
+  l2/l1/genblk1.h/U2/Z (OR2D0BWP12T)                      0.03       1.10 f
+  l2/l1/genblk1.h/vld (LOD_N4_4)                          0.00       1.10 f
+  l2/l1/U5/Z (CKMUX2D0BWP12T)                             0.05       1.14 r
+  l2/l1/out[0] (LOD_N8_2)                                 0.00       1.14 r
+  l2/out[0] (LOD_N_N8_2)                                  0.00       1.14 r
+  sub3/b[0] (sub_N_00000006_0)                            0.00       1.14 r
+  sub3/s1/b[0] (sub_N_in_00000006_0)                      0.00       1.14 r
+  sub3/s1/U17/ZN (CKND2D0BWP12T)                          0.02       1.16 f
+  sub3/s1/U14/ZN (NR2D0BWP12T)                            0.02       1.18 r
+  sub3/s1/U13/ZN (MOAI22D0BWP12T)                         0.02       1.20 f
+  sub3/s1/U11/ZN (NR2D0BWP12T)                            0.02       1.22 r
+  sub3/s1/U10/ZN (MOAI22D0BWP12T)                         0.02       1.23 f
+  sub3/s1/U7/ZN (NR2D0BWP12T)                             0.02       1.25 r
+  sub3/s1/U6/ZN (MOAI22D0BWP12T)                          0.02       1.27 f
+  sub3/s1/U4/Z (OR2D0BWP12T)                              0.02       1.29 f
+  sub3/s1/U3/ZN (AOI22D0BWP12T)                           0.01       1.30 r
+  sub3/s1/U2/Z (XOR3D0BWP12T)                             0.03       1.33 f
+  sub3/s1/c[5] (sub_N_in_00000006_0)                      0.00       1.33 f
+  sub3/c[5] (sub_N_00000006_0)                            0.00       1.33 f
+  uut_add_mantovf/a[5] (add_1_00000006)                   0.00       1.33 f
+  uut_add_mantovf/U1/Z (CKXOR2D0BWP12T)                   0.04       1.37 r
+  uut_add_mantovf/c[5] (add_1_00000006)                   0.00       1.37 r
+  uut_reg_ro/exp_o[5] (reg_exp_op_2_00000003)             0.00       1.37 r
+  uut_reg_ro/U17/ZN (CKND0BWP12T)                         0.02       1.39 f
+  uut_reg_ro/U11/Z (OR3D0BWP12T)                          0.03       1.42 f
+  uut_reg_ro/U7/Z (AN2D0BWP12T)                           0.02       1.43 f
+  uut_reg_ro/U6/Z (CKXOR2D0BWP12T)                        0.03       1.46 f
+  uut_reg_ro/r_o[1] (reg_exp_op_2_00000003)               0.00       1.46 f
+  dsr2/b[1] (DSR_right_N_S_27_00000003)                   0.00       1.46 f
+  dsr2/U87/ZN (CKND2D0BWP12T)                             0.02       1.48 r
+  dsr2/U86/ZN (CKND0BWP12T)                               0.04       1.52 f
+  dsr2/U60/Z (AO22D0BWP12T)                               0.04       1.56 f
+  dsr2/U59/ZN (AOI221D0BWP12T)                            0.04       1.60 r
+  dsr2/U2/ZN (MUX2ND0BWP12T)                              0.01       1.61 f
+  dsr2/c[9] (DSR_right_N_S_27_00000003)                   0.00       1.61 f
+  U344/Z (OR3D0BWP12T)                                    0.03       1.65 f
+  U343/ZN (NR4D0BWP12T)                                   0.01       1.66 r
+  U341/ZN (AOI31D0BWP12T)                                 0.02       1.68 f
+  uut_add_ulp/b[0] (add_N_N8_1)                           0.00       1.68 f
+  uut_add_ulp/a1/b[0] (add_N_in_N8_1)                     0.00       1.68 f
+  uut_add_ulp/a1/add_226/B[0] (add_N_in_N8_1_DW01_add_0)
+                                                          0.00       1.68 f
+  uut_add_ulp/a1/add_226/U2/Z (AN2D1BWP12T)               0.02       1.70 f
+  uut_add_ulp/a1/add_226/U1_1/CO (FA1D0BWP12T)            0.02       1.72 f
+  uut_add_ulp/a1/add_226/U1_2/CO (FA1D0BWP12T)            0.02       1.74 f
+  uut_add_ulp/a1/add_226/U1_3/CO (FA1D0BWP12T)            0.02       1.77 f
+  uut_add_ulp/a1/add_226/U1_4/CO (FA1D0BWP12T)            0.02       1.79 f
+  uut_add_ulp/a1/add_226/U1_5/CO (FA1D0BWP12T)            0.02       1.81 f
+  uut_add_ulp/a1/add_226/U1_6/CO (FA1D0BWP12T)            0.02       1.83 f
+  uut_add_ulp/a1/add_226/U1_7/Z (XOR3XD0BWP12T)           0.03       1.86 r
+  uut_add_ulp/a1/add_226/SUM[7] (add_N_in_N8_1_DW01_add_0)
+                                                          0.00       1.86 r
+  uut_add_ulp/a1/c[7] (add_N_in_N8_1)                     0.00       1.86 r
+  uut_add_ulp/c[7] (add_N_N8_1)                           0.00       1.86 r
+  U351/ZN (MUX2ND0BWP12T)                                 0.01       1.87 f
+  U349/Z (CKXOR2D0BWP12T)                                 0.03       1.90 f
+  U348/ZN (OAI22D0BWP12T)                                 0.01       1.92 r
+  out[6] (out)                                            0.00       1.92 r
+  data arrival time                                                  1.92
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

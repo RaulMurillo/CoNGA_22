@@ -1,0 +1,106 @@
+[
+    {
+        "Power": 1.1753, 
+        "Area": 1084.036811, 
+        "Energy": 2.256576, 
+        "Delay": 1.92, 
+        "Design": "PACoGen", 
+        "Bits": 8
+    }, 
+    {
+        "Power": 1.6248, 
+        "Area": 1543.147213, 
+        "Energy": 3.460824, 
+        "Delay": 2.13, 
+        "Design": "PACoGen", 
+        "Bits": 10
+    }, 
+    {
+        "Power": 1.9073, 
+        "Area": 1767.292816, 
+        "Energy": 4.558447, 
+        "Delay": 2.39, 
+        "Design": "PACoGen", 
+        "Bits": 12
+    }, 
+    {
+        "Power": 2.1799, 
+        "Area": 1985.558417, 
+        "Energy": 5.406152, 
+        "Delay": 2.48, 
+        "Design": "PACoGen", 
+        "Bits": 14
+    }, 
+    {
+        "Power": 2.4828, 
+        "Area": 2231.57762, 
+        "Energy": 6.629076, 
+        "Delay": 2.67, 
+        "Design": "PACoGen", 
+        "Bits": 16
+    }, 
+    {
+        "Power": 3.1196, 
+        "Area": 2953.641619, 
+        "Energy": 9.452388, 
+        "Delay": 3.03, 
+        "Design": "PACoGen", 
+        "Bits": 18
+    }, 
+    {
+        "Power": 3.4392, 
+        "Area": 3217.771219, 
+        "Energy": 10.867872, 
+        "Delay": 3.16, 
+        "Design": "PACoGen", 
+        "Bits": 20
+    }, 
+    {
+        "Power": 3.969, 
+        "Area": 3643.012826, 
+        "Energy": 13.45491, 
+        "Delay": 3.39, 
+        "Design": "PACoGen", 
+        "Bits": 22
+    }, 
+    {
+        "Power": 4.32, 
+        "Area": 3935.366427, 
+        "Energy": 15.0336, 
+        "Delay": 3.48, 
+        "Design": "PACoGen", 
+        "Bits": 24
+    }, 
+    {
+        "Power": 4.6503, 
+        "Area": 4230.542427, 
+        "Energy": 17.020098, 
+        "Delay": 3.66, 
+        "Design": "PACoGen", 
+        "Bits": 26
+    }, 
+    {
+        "Power": 4.9715, 
+        "Area": 4529.95203, 
+        "Energy": 18.344835, 
+        "Delay": 3.69, 
+        "Design": "PACoGen", 
+        "Bits": 28
+    }, 
+    {
+        "Power": 5.3295, 
+        "Area": 4841.121628, 
+        "Energy": 20.67846, 
+        "Delay": 3.88, 
+        "Design": "PACoGen", 
+        "Bits": 30
+    }, 
+    {
+        "Power": 5.6565, 
+        "Area": 5144.764831, 
+        "Energy": 23.021955, 
+        "Delay": 4.07, 
+        "Design": "PACoGen", 
+        "Bits": 32
+    }
+]

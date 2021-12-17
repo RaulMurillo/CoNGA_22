@@ -1,0 +1,318 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Dec 10 19:22:27 2021
+# Process ID: 29606
+# Current directory: /home/raul/CoNGA_22/Addition/PACoGen/add_8_2
+# Command line: vivado -mode batch -source vivado.tcl
+# Log file: /home/raul/CoNGA_22/Addition/PACoGen/add_8_2/vivado.log
+# Journal file: /home/raul/CoNGA_22/Addition/PACoGen/add_8_2/vivado.jou
+#-----------------------------------------------------------
+source vivado.tcl
+# proc dump_statistics {  } {
+#   set util_rpt [report_utilization -return_string]
+#   set LUTFFPairs 0
+#   set SliceRegisters 0
+#   set Slice 0
+#   set SliceLUTs 0
+#   set SliceLUTs1 0
+#   set BRAMFIFO36 0
+#   set BRAMFIFO18 0
+#   set BRAMFIFO36_star 0
+#   set BRAMFIFO18_star 0
+#   set BRAM18 0
+#   set BRAMFIFO 0
+#   set BIOB 0
+#   set DSPs 0
+#   set TotPower 0
+#   set design_slack 0
+#   set design_req 0
+#   set design_delay 0
+#   regexp --  {\s*LUT Flip Flop Pairs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore LUTFFPairs
+#   regexp --  {\s*Slice Registers\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceRegisters
+#   regexp --  {\s*Slice\s*\|\s*([^[:blank:]]+)} $util_rpt ignore Slice
+#   regexp --  {\s*Slice LUTs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceLUTs
+#   regexp --  {\s*Slice LUTs\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore SliceLUTs1
+#   if { [expr {$LUTFFPairs == 0}] } {
+#     set LUTFFPairs $SliceLUTs1
+#     puts $SliceLUTs1
+#   }
+#   if { [expr {$SliceLUTs == 0}] } {
+#     set SliceLUTs $SliceLUTs1
+#   }
+#   regexp --  {\s*RAMB36/FIFO36\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO36
+#   regexp --  {\s*RAMB18/FIFO18\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO18
+#   regexp --  {\s*RAMB36/FIFO\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO36_star
+#   regexp --  {\s*RAMB18/FIFO\*\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAMFIFO18_star
+#   regexp --  {\s*RAMB18\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BRAM18
+#   set BRAMFIFO [expr {(2 *$BRAMFIFO36) + $BRAMFIFO18 + (2*$BRAMFIFO36_star) + $BRAMFIFO18_star + $BRAM18}]
+#   regexp --  {\s*Bonded IOB\s*\|\s*([^[:blank:]]+)} $util_rpt ignore BIOB
+#   regexp --  {\s*DSPs\s*\|\s*([^[:blank:]]+)} $util_rpt ignore DSPs
+#   set power_rpt [report_power -return_string]
+#   regexp --  {\s*Total On-Chip Power \(W\)\s*\|\s*([^[:blank:]]+)} $power_rpt ignore TotPower
+#   set Timing_Paths [get_timing_paths -max_paths 1 -nworst 1 -setup]
+#   if { [expr {$Timing_Paths == ""}] } {
+#     set design_slack 0
+#     set design_req 0
+#   } else {
+#     set design_slack [get_property SLACK $Timing_Paths]
+#     set design_req [get_property REQUIREMENT  $Timing_Paths]
+#   }
+#   if { [expr {$design_slack == ""}] } {
+#     set design_slack 0
+#   }
+#   if { [expr {$design_req == ""}] } {
+#     set design_req 0
+#   }
+#   set design_delay [expr {$design_req - $design_slack}]
+#   file delete -force HLS_output//Synthesis/vivado_flow/kernel_report.xml 
+#   set ofile_report [open HLS_output//Synthesis/vivado_flow/kernel_report.xml w]
+#   puts $ofile_report "<?xml version=\"1.0\"?>"
+#   puts $ofile_report "<document>"
+#   puts $ofile_report "  <application>"
+#   puts $ofile_report "    <section stringID=\"XILINX_SYNTHESIS_SUMMARY\">"
+#   puts $ofile_report "      <item stringID=\"XILINX_LUT_FLIP_FLOP_PAIRS_USED\" value=\"$LUTFFPairs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE\" value=\"$Slice\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE_REGISTERS\" value=\"$SliceRegisters\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_SLICE_LUTS\" value=\"$SliceLUTs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_BLOCK_RAMFIFO\" value=\"$BRAMFIFO\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_IOPIN\" value=\"$BIOB\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_DSPS\" value=\"$DSPs\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_POWER\" value=\"$TotPower\"/>"
+#   puts $ofile_report "      <item stringID=\"XILINX_DESIGN_DELAY\" value=\"$design_delay\"/>"
+#   puts $ofile_report "    </section>"
+#   puts $ofile_report "  </application>"
+#   puts $ofile_report "</document>"
+#   close $ofile_report
+# };
+# set_param general.maxThreads 1
+# set outputDir HLS_output//Synthesis/vivado_flow
+# file mkdir $outputDir
+# create_project kernel -part xc7z020clg484-1 -force
+# read_verilog posit_add.v
+# set rfile_sdc [open HLS_output//Synthesis/vivado_flow/kernel.sdc r]
+# set clk_constraint [regexp -all --  CLK_SRC [read $rfile_sdc [file size HLS_output//Synthesis/vivado_flow/kernel.sdc]]]
+# if { [expr {$clk_constraint == 0}] } {
+#   set ofile_sdc [open HLS_output//Synthesis/vivado_flow/kernel.sdc a]
+#   # puts $ofile_sdc "set_property HD.CLK_SRC BUFGCTRL_X0Y0 \[get_ports clock\]"
+#   puts $ofile_sdc "set_property HD.PARTPIN_LOCS INT_R_X0Y0 \[get_ports in1\[0\] in2\[0\]\]"
+#   # puts $ofile_sdc "set_property HD.PARTPIN_LOCS INT_R_X0Y0 \[get_ports in1\[0\]\]"
+#   # puts $ofile_sdc "set_property HD.PARTPIN_LOCS INT_R_X0Y0 \[get_ports in2\[0\]\]"
+#   close $ofile_sdc
+# }
+# read_xdc HLS_output//Synthesis/vivado_flow/kernel.sdc
+# synth_design -mode out_of_context -no_iobuf -top posit_add -part xc7z020clg484-1
+Command: synth_design -mode out_of_context -no_iobuf -top posit_add -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29614
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2468.383 ; gain = 0.000 ; free physical = 1083 ; free virtual = 26389
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'posit_add' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:2]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:159]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+INFO: [Synth 8-6157] synthesizing module 'data_extract_v1' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:155]
+	Parameter N bound to: 8 - type: integer 
+	Parameter es bound to: 2 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:332]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+INFO: [Synth 8-6157] synthesizing module 'LOD_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:327]
+	Parameter N bound to: 8 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6157] synthesizing module 'LOD' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+	Parameter N bound to: 8 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6157] synthesizing module 'LOD__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+	Parameter N bound to: 4 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6157] synthesizing module 'LOD__parameterized1' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+	Parameter N bound to: 2 - type: integer 
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'LOD__parameterized1' (1#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'LOD__parameterized0' (1#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:353]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'LOD' (1#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:348]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:332]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+INFO: [Synth 8-6155] done synthesizing module 'LOD_N' (2#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:327]
+INFO: [Synth 8-6157] synthesizing module 'DSR_left_N_S' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:285]
+	Parameter N bound to: 8 - type: integer 
+	Parameter S bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DSR_left_N_S' (3#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:285]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:159]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'data_extract_v1' (4#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:155]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:159]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:161]
+INFO: [Synth 8-6157] synthesizing module 'abs_regime' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:252]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'abs_regime' (5#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:252]
+INFO: [Synth 8-6157] synthesizing module 'sub_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sub_N_in' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sub_N_in' (6#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+INFO: [Synth 8-6155] done synthesizing module 'sub_N' (7#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+INFO: [Synth 8-6157] synthesizing module 'DSR_right_N_S' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+	Parameter N bound to: 8 - type: integer 
+	Parameter S bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DSR_right_N_S' (8#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+INFO: [Synth 8-6157] synthesizing module 'add_sub_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:230]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'add_N' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:204]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'add_N_in' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:222]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'add_N_in' (9#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'add_N' (10#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:204]
+INFO: [Synth 8-6157] synthesizing module 'sub_N__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sub_N_in__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sub_N_in__parameterized0' (10#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:214]
+INFO: [Synth 8-6155] done synthesizing module 'sub_N__parameterized0' (10#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:194]
+INFO: [Synth 8-6155] done synthesizing module 'add_sub_N' (11#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:230]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:332]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:334]
+INFO: [Synth 8-6157] synthesizing module 'add_1' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:243]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'add_1' (12#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:243]
+INFO: [Synth 8-6157] synthesizing module 'reg_exp_op' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:269]
+	Parameter es bound to: 2 - type: integer 
+	Parameter Bs bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'conv_2c' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:262]
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_2c' (13#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:262]
+INFO: [Synth 8-6155] done synthesizing module 'reg_exp_op' (14#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:269]
+INFO: [Synth 8-6157] synthesizing module 'DSR_right_N_S__parameterized0' [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+	Parameter N bound to: 27 - type: integer 
+	Parameter S bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DSR_right_N_S__parameterized0' (14#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:306]
+INFO: [Synth 8-6155] done synthesizing module 'posit_add' (15#1) [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/posit_add.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2468.383 ; gain = 0.000 ; free physical = 270 ; free virtual = 25577
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2468.383 ; gain = 0.000 ; free physical = 265 ; free virtual = 25571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2468.383 ; gain = 0.000 ; free physical = 265 ; free virtual = 25571
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2468.383 ; gain = 0.000 ; free physical = 258 ; free virtual = 25565
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc]
+CRITICAL WARNING: [Common 17-165] Too many positional options when parsing 'in2[0]', please type 'get_ports -help' for usage info. [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc:1]
+Finished Parsing XDC File [/home/raul/CoNGA_22/Addition/PACoGen/add_8_2/HLS_output/Synthesis/vivado_flow/kernel.sdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2476.262 ; gain = 0.000 ; free physical = 1013 ; free virtual = 26319
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2476.262 ; gain = 0.000 ; free physical = 1013 ; free virtual = 26319
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2476.262 ; gain = 7.879 ; free physical = 1091 ; free virtual = 26390
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2476.262 ; gain = 7.879 ; free physical = 1089 ; free virtual = 26389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2476.262 ; gain = 7.879 ; free physical = 1086 ; free virtual = 26389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2476.262 ; gain = 7.879 ; free physical = 1074 ; free virtual = 26382
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 2     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   3 Input    7 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input   27 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 18    
+	   2 Input    7 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+1
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 47 Warnings, 1 Critical Warnings and 1 Errors encountered.
+synth_design failed
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 10 19:23:08 2021...
