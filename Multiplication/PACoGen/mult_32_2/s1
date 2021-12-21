@@ -6,10 +6,10 @@ set link_library $MYLIB
 read_db $MYLIB
 #------------------------
 set power_preserve_rtl_hier_names true
-analyze -format vhdl -lib WORK "./flopoco.vhdl"
-#elaborate PositMult -arch "estr" -lib WORK -update
-elaborate PositMult
-#rtl2saif -output "PositMult.RT.saif" -design "PositMult"
+analyze -format verilog -lib WORK "./posit_mult.v"
+#elaborate posit_mult -arch "estr" -lib WORK -update
+elaborate posit_mult
+#rtl2saif -output "posit_mult.RT.saif" -design "posit_mult"
 uniquify
 #set_max_delay 1 [all_outputs]
 set_switching_activity -type inputs -toggle_rate 0.1

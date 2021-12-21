@@ -7,9 +7,9 @@ read_db $MYLIB
 #------------------------
 set power_preserve_rtl_hier_names true
 analyze -format vhdl -lib WORK "./flopoco.vhdl"
-#elaborate PositAdder -arch "estr" -lib WORK -update
-elaborate PositAdder
-#rtl2saif -output "PositAdder.RT.saif" -design "PositAdder"
+#elaborate PositMult -arch "estr" -lib WORK -update
+elaborate PositMult
+#rtl2saif -output "PositMult.RT.saif" -design "PositMult"
 uniquify
 #set_max_delay 1 [all_outputs]
 set_switching_activity -type inputs -toggle_rate 0.1
