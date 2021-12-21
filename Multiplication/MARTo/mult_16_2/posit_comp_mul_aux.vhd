@@ -3,52 +3,32 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity posit_comp_mul_mul_mul_13s_13s_26_4_1_DSP48_0 is
+entity posit_comp_mul_mul_mul_13s_13s_26_1_1_DSP48_0 is
 port (
-    clk: in std_logic;
-    rst: in std_logic;
-    ce: in std_logic;
     a: in std_logic_vector(13 - 1 downto 0);
     b: in std_logic_vector(13 - 1 downto 0);
     p: out std_logic_vector(26 - 1 downto 0));
 
 end entity;
 
-architecture behav of posit_comp_mul_mul_mul_13s_13s_26_4_1_DSP48_0 is
+architecture behav of posit_comp_mul_mul_mul_13s_13s_26_1_1_DSP48_0 is
     signal a_cvt: signed(13 - 1 downto 0);
     signal b_cvt: signed(13 - 1 downto 0);
     signal p_cvt: signed(26 - 1 downto 0);
 
-    signal p_reg: signed(26 - 1 downto 0);
 
-    signal a_reg: signed(13 - 1 downto 0) ; 
-    signal b_reg: signed(13 - 1 downto 0) ; 
-    signal p_reg_tmp: signed(26 - 1 downto 0);
 begin
 
     a_cvt <= signed(a);
     b_cvt <= signed(b);
-
-    process(clk)
-    begin
-        if (clk'event and clk = '1') then
-            if (ce = '1') then
-                a_reg <= a_cvt;
-                b_reg <= b_cvt;
-                p_reg_tmp <= p_cvt;
-                p_reg <= p_reg_tmp;
-            end if;
-        end if;
-    end process;
-
-    p_cvt <= signed (resize(unsigned (a_reg * b_reg), 26));
-    p <= std_logic_vector(p_reg);
+    p_cvt <= signed (resize(unsigned (a_cvt * b_cvt), 26));
+    p <= std_logic_vector(p_cvt);
 
 end architecture;
 Library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity posit_comp_mul_mul_mul_13s_13s_26_4_1 is
+entity posit_comp_mul_mul_mul_13s_13s_26_1_1 is
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -56,20 +36,14 @@ entity posit_comp_mul_mul_mul_13s_13s_26_4_1 is
         din1_WIDTH : INTEGER;
         dout_WIDTH : INTEGER);
     port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        ce : IN STD_LOGIC;
         din0 : IN STD_LOGIC_VECTOR(din0_WIDTH - 1 DOWNTO 0);
         din1 : IN STD_LOGIC_VECTOR(din1_WIDTH - 1 DOWNTO 0);
         dout : OUT STD_LOGIC_VECTOR(dout_WIDTH - 1 DOWNTO 0));
 end entity;
 
-architecture arch of posit_comp_mul_mul_mul_13s_13s_26_4_1 is
-    component posit_comp_mul_mul_mul_13s_13s_26_4_1_DSP48_0 is
+architecture arch of posit_comp_mul_mul_mul_13s_13s_26_1_1 is
+    component posit_comp_mul_mul_mul_13s_13s_26_1_1_DSP48_0 is
         port (
-            clk : IN STD_LOGIC;
-            rst : IN STD_LOGIC;
-            ce : IN STD_LOGIC;
             a : IN STD_LOGIC_VECTOR;
             b : IN STD_LOGIC_VECTOR;
             p : OUT STD_LOGIC_VECTOR);
@@ -78,11 +52,8 @@ architecture arch of posit_comp_mul_mul_mul_13s_13s_26_4_1 is
 
 
 begin
-    posit_comp_mul_mul_mul_13s_13s_26_4_1_DSP48_0_U :  component posit_comp_mul_mul_mul_13s_13s_26_4_1_DSP48_0
+    posit_comp_mul_mul_mul_13s_13s_26_1_1_DSP48_0_U :  component posit_comp_mul_mul_mul_13s_13s_26_1_1_DSP48_0
     port map (
-        clk => clk,
-        rst => reset,
-        ce => ce,
         a => din0,
         b => din1,
         p => dout);

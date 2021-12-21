@@ -17,6 +17,7 @@ ap_uint<ENC_SIZE> posit_comp_mul(
 	PositEncoding<N, WES, hint::VivadoWrapper> in2
 )
 {
+#pragma HLS LATENCY max=0
 	auto decoded1 = posit_decoder(in1);
 	auto decoded2 = posit_decoder(in2);
 	auto mul = posit_mul(decoded1, decoded2);

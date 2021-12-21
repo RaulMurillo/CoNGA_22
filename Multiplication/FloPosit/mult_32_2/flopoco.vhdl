@@ -384,13 +384,13 @@ library std;
 use std.textio.all;
 library work;
 
-entity PositMult_32_2_F0_uid2 is
+entity PositMult is
     port (X : in  std_logic_vector(31 downto 0);
           Y : in  std_logic_vector(31 downto 0);
           R : out  std_logic_vector(31 downto 0)   );
 end entity;
 
-architecture arch of PositMult_32_2_F0_uid2 is
+architecture arch of PositMult is
    component PositDecoder_32_2_F0_uid4 is
       port ( Input : in  std_logic_vector(31 downto 0);
              Sign : out  std_logic;
