@@ -88,10 +88,10 @@
         "Bits": 16
     }, 
     {
-        "Power": 15.3295, 
-        "Area": 8353.128042, 
-        "Energy": 56.565855, 
-        "Delay": 3.69, 
+        "Power": 14.1893, 
+        "Area": 7468.305652, 
+        "Energy": 49.094978, 
+        "Delay": 3.46, 
         "Design": "Proposed", 
         "Bits": 32
     }

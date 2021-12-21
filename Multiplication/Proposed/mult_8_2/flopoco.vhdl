@@ -259,43 +259,6 @@ begin
 end architecture;
 
 --------------------------------------------------------------------------------
---                           DSPBlock_5x5_F0_uid16
--- VHDL generated for Kintex7 @ 0MHz
--- This operator is part of the Infinite Virtual Library FloPoCoLib
--- All rights reserved 
--- Authors: 
---------------------------------------------------------------------------------
--- combinatorial
--- Clock period (ns): inf
--- Target frequency (MHz): 0
--- Input signals: X Y
--- Output signals: R
-
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-library std;
-use std.textio.all;
-library work;
-
-entity DSPBlock_5x5_F0_uid16 is
-    port (X : in  std_logic_vector(4 downto 0);
-          Y : in  std_logic_vector(4 downto 0);
-          R : out  std_logic_vector(9 downto 0)   );
-end entity;
-
-architecture arch of DSPBlock_5x5_F0_uid16 is
-signal Mint :  std_logic_vector(9 downto 0);
-signal M :  std_logic_vector(9 downto 0);
-signal Rtmp :  std_logic_vector(9 downto 0);
-begin
-   Mint <= std_logic_vector(signed(X) * signed(Y)); -- multiplier
-   M <= Mint(9 downto 0);
-   Rtmp <= M;
-   R <= Rtmp;
-end architecture;
-
---------------------------------------------------------------------------------
 --                           IntMultiplier_F0_uid12
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
@@ -322,62 +285,22 @@ entity IntMultiplier_F0_uid12 is
 end entity;
 
 architecture arch of IntMultiplier_F0_uid12 is
-   component DSPBlock_5x5_F0_uid16 is
-      port ( X : in  std_logic_vector(4 downto 0);
-             Y : in  std_logic_vector(4 downto 0);
-             R : out  std_logic_vector(9 downto 0)   );
-   end component;
-
 signal XX_m13 :  std_logic_vector(4 downto 0);
 signal YY_m13 :  std_logic_vector(4 downto 0);
-signal tile_0_X :  std_logic_vector(4 downto 0);
-signal tile_0_Y :  std_logic_vector(4 downto 0);
-signal tile_0_output :  std_logic_vector(9 downto 0);
-signal tile_0_filtered_output :  signed(9-0 downto 0);
-signal bh14_w0_0 :  std_logic;
-signal bh14_w1_0 :  std_logic;
-signal bh14_w2_0 :  std_logic;
-signal bh14_w3_0 :  std_logic;
-signal bh14_w4_0 :  std_logic;
-signal bh14_w5_0 :  std_logic;
-signal bh14_w6_0 :  std_logic;
-signal bh14_w7_0 :  std_logic;
-signal bh14_w8_0 :  std_logic;
-signal bh14_w9_0 :  std_logic;
-signal tmp_bitheapResult_bh14_9 :  std_logic_vector(9 downto 0);
-signal bitheapResult_bh14 :  std_logic_vector(9 downto 0);
+signal XX :  signed(-1+5 downto 0);
+signal YY :  signed(-1+5 downto 0);
+signal RR :  signed(-1+10 downto 0);
 begin
    XX_m13 <= X ;
    YY_m13 <= Y ;
-   tile_0_X <= X(4 downto 0);
-   tile_0_Y <= Y(4 downto 0);
-   tile_0_mult: DSPBlock_5x5_F0_uid16
-      port map ( X => tile_0_X,
-                 Y => tile_0_Y,
-                 R => tile_0_output);
-
-   tile_0_filtered_output <= signed(tile_0_output(9 downto 0));
-   bh14_w0_0 <= tile_0_filtered_output(0);
-   bh14_w1_0 <= tile_0_filtered_output(1);
-   bh14_w2_0 <= tile_0_filtered_output(2);
-   bh14_w3_0 <= tile_0_filtered_output(3);
-   bh14_w4_0 <= tile_0_filtered_output(4);
-   bh14_w5_0 <= tile_0_filtered_output(5);
-   bh14_w6_0 <= tile_0_filtered_output(6);
-   bh14_w7_0 <= tile_0_filtered_output(7);
-   bh14_w8_0 <= tile_0_filtered_output(8);
-   bh14_w9_0 <= tile_0_filtered_output(9);
-
-   -- Adding the constant bits 
-      -- All the constant bits are zero, nothing to add
-
-   tmp_bitheapResult_bh14_9 <= bh14_w9_0 & bh14_w8_0 & bh14_w7_0 & bh14_w6_0 & bh14_w5_0 & bh14_w4_0 & bh14_w3_0 & bh14_w2_0 & bh14_w1_0 & bh14_w0_0;
-   bitheapResult_bh14 <= tmp_bitheapResult_bh14_9;
-   R <= bitheapResult_bh14(9 downto 0);
+   XX <= signed(X);
+   YY <= signed(Y);
+   RR <= XX*YY;
+   R <= std_logic_vector(RR(9 downto 0));
 end architecture;
 
 --------------------------------------------------------------------------------
---                   RightShifterSticky7_by_max_7_F0_uid21
+--                   RightShifterSticky7_by_max_7_F0_uid17
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
 -- All rights reserved 
@@ -397,7 +320,7 @@ library std;
 use std.textio.all;
 library work;
 
-entity RightShifterSticky7_by_max_7_F0_uid21 is
+entity RightShifterSticky7_by_max_7_F0_uid17 is
     port (X : in  std_logic_vector(6 downto 0);
           S : in  std_logic_vector(2 downto 0);
           padBit : in  std_logic;
@@ -405,7 +328,7 @@ entity RightShifterSticky7_by_max_7_F0_uid21 is
           Sticky : out  std_logic   );
 end entity;
 
-architecture arch of RightShifterSticky7_by_max_7_F0_uid21 is
+architecture arch of RightShifterSticky7_by_max_7_F0_uid17 is
 signal ps :  std_logic_vector(2 downto 0);
 signal Xpadded :  std_logic_vector(6 downto 0);
 signal level3 :  std_logic_vector(6 downto 0);
@@ -430,7 +353,7 @@ begin
 end architecture;
 
 --------------------------------------------------------------------------------
---                       PositFastEncoder_8_2_F0_uid19
+--                       PositFastEncoder_8_2_F0_uid15
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
 -- All rights reserved 
@@ -450,7 +373,7 @@ library std;
 use std.textio.all;
 library work;
 
-entity PositFastEncoder_8_2_F0_uid19 is
+entity PositFastEncoder_8_2_F0_uid15 is
     port (Sign : in  std_logic;
           SF : in  std_logic_vector(6 downto 0);
           Frac : in  std_logic_vector(2 downto 0);
@@ -460,8 +383,8 @@ entity PositFastEncoder_8_2_F0_uid19 is
           R : out  std_logic_vector(7 downto 0)   );
 end entity;
 
-architecture arch of PositFastEncoder_8_2_F0_uid19 is
-   component RightShifterSticky7_by_max_7_F0_uid21 is
+architecture arch of PositFastEncoder_8_2_F0_uid15 is
+   component RightShifterSticky7_by_max_7_F0_uid17 is
       port ( X : in  std_logic_vector(6 downto 0);
              S : in  std_logic_vector(2 downto 0);
              padBit : in  std_logic;
@@ -503,7 +426,7 @@ begin
    regNeg <= Sign XOR rc;
    padBit <= NOT(regNeg);
    inputShifter <= regNeg & exp & Frac & Guard;
-   RegimeGenerator: RightShifterSticky7_by_max_7_F0_uid21
+   RegimeGenerator: RightShifterSticky7_by_max_7_F0_uid17
       port map ( S => regValue,
                  X => inputShifter,
                  padBit => padBit,
@@ -523,8 +446,7 @@ begin
 end architecture;
 
 --------------------------------------------------------------------------------
---                                 PositMult
---                          (PositMult_8_2_F0_uid2)
+--                           PositMult_8_2_F0_uid2
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
 -- All rights reserved 
@@ -543,13 +465,13 @@ library std;
 use std.textio.all;
 library work;
 
-entity PositMult is
+entity PositMult_8_2_F0_uid2 is
     port (X : in  std_logic_vector(7 downto 0);
           Y : in  std_logic_vector(7 downto 0);
           R : out  std_logic_vector(7 downto 0)   );
 end entity;
 
-architecture arch of PositMult is
+architecture arch of PositMult_8_2_F0_uid2 is
    component PositFastDecoder_8_2_F0_uid4 is
       port ( X : in  std_logic_vector(7 downto 0);
              Sign : out  std_logic;
@@ -572,7 +494,7 @@ architecture arch of PositMult is
              R : out  std_logic_vector(9 downto 0)   );
    end component;
 
-   component PositFastEncoder_8_2_F0_uid19 is
+   component PositFastEncoder_8_2_F0_uid15 is
       port ( Sign : in  std_logic;
              SF : in  std_logic_vector(6 downto 0);
              Frac : in  std_logic_vector(2 downto 0);
@@ -645,7 +567,7 @@ begin
    XY_frac <= XY_normF(6 downto 4);
    grd <= XY_normF(3);
    stk <= '0' when (XY_normF(2 downto 0) = "000") else '1';
-   PositEncoder: PositFastEncoder_8_2_F0_uid19
+   PositEncoder: PositFastEncoder_8_2_F0_uid15
       port map ( Frac => XY_frac,
                  Guard => grd,
                  NZN => XY_nzn,

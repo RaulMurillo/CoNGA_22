@@ -18,9 +18,9 @@
 	{
 		"Design": "Proposed",
 		"Bits": 32,
-		"Area": 8353.128042,
-		"Power": 15.3295,
-		"Delay": 3.69,
-		"Energy": 56.565855
+		"Area": 7468.305652,
+		"Power": 14.1893,
+		"Delay": 3.46,
+		"Energy": 49.094978
 	}
 ]
