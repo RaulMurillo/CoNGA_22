@@ -1,0 +1,98 @@
+[
+    {
+        "Power": 1.1753, 
+        "Area": 1084.036811, 
+        "Energy": 2.256576, 
+        "Delay": 1.92, 
+        "Design": "PACoGen", 
+        "Bits": 8
+    }, 
+    {
+        "Power": 2.4828, 
+        "Area": 2231.57762, 
+        "Energy": 6.629076, 
+        "Delay": 2.67, 
+        "Design": "PACoGen", 
+        "Bits": 16
+    }, 
+    {
+        "Power": 5.6565, 
+        "Area": 5144.764831, 
+        "Energy": 23.021955, 
+        "Delay": 4.07, 
+        "Design": "PACoGen", 
+        "Bits": 32
+    }, 
+    {
+        "Power": 0.692, 
+        "Area": 688.430403, 
+        "Energy": 1.3494, 
+        "Delay": 1.95, 
+        "Design": "FloPosit", 
+        "Bits": 8
+    }, 
+    {
+        "Power": 1.6927, 
+        "Area": 1481.995205, 
+        "Energy": 4.942684, 
+        "Delay": 2.92, 
+        "Design": "FloPosit", 
+        "Bits": 16
+    }, 
+    {
+        "Power": 4.134, 
+        "Area": 3393.230403, 
+        "Energy": 19.80186, 
+        "Delay": 4.79, 
+        "Design": "FloPosit", 
+        "Bits": 32
+    }, 
+    {
+        "Power": 0.6257, 
+        "Area": 556.718401, 
+        "Energy": 1.094975, 
+        "Delay": 1.75, 
+        "Design": "MARTo", 
+        "Bits": 8
+    }, 
+    {
+        "Power": 1.4491, 
+        "Area": 1293.364804, 
+        "Energy": 3.550295, 
+        "Delay": 2.45, 
+        "Design": "MARTo", 
+        "Bits": 16
+    }, 
+    {
+        "Power": 3.1911, 
+        "Area": 2929.651213, 
+        "Energy": 12.158091, 
+        "Delay": 3.81, 
+        "Design": "MARTo", 
+        "Bits": 32
+    }, 
+    {
+        "Power": 0.5908, 
+        "Area": 576.240003, 
+        "Energy": 1.057532, 
+        "Delay": 1.79, 
+        "Design": "Proposed", 
+        "Bits": 8
+    }, 
+    {
+        "Power": 1.2216, 
+        "Area": 1176.705608, 
+        "Energy": 3.530424, 
+        "Delay": 2.89, 
+        "Design": "Proposed", 
+        "Bits": 16
+    }, 
+    {
+        "Power": 2.7736, 
+        "Area": 2622.95042, 
+        "Energy": 11.92648, 
+        "Delay": 4.3, 
+        "Design": "Proposed", 
+        "Bits": 32
+    }
+]

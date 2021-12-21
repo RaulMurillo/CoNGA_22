@@ -1,0 +1,26 @@
+[
+	{
+		"Design": "MARTo",
+		"Bits": 8,
+		"Area": 556.718401,
+		"Power": 0.6257,
+		"Delay": 1.75,
+		"Energy": 1.094975
+	},
+	{
+		"Design": "MARTo",
+		"Bits": 16,
+		"Area": 1293.364804,
+		"Power": 1.4491,
+		"Delay": 2.45,
+		"Energy": 3.550295
+	},
+	{
+		"Design": "MARTo",
+		"Bits": 32,
+		"Area": 2929.651213,
+		"Power": 3.1911,
+		"Delay": 3.81,
+		"Energy": 12.158091
+	}
+]

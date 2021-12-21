@@ -1,106 +1,98 @@
 [
     {
-        "Power": 1.1753, 
-        "Area": 1084.036811, 
-        "Energy": 2.256576, 
-        "Delay": 1.92, 
+        "Power": 1.2546, 
+        "Area": 1043.817606, 
+        "Energy": 1.8819, 
+        "Delay": 1.5, 
         "Design": "PACoGen", 
         "Bits": 8
     }, 
     {
-        "Power": 1.6248, 
-        "Area": 1543.147213, 
-        "Energy": 3.460824, 
-        "Delay": 2.13, 
-        "Design": "PACoGen", 
-        "Bits": 10
-    }, 
-    {
-        "Power": 1.9073, 
-        "Area": 1767.292816, 
-        "Energy": 4.558447, 
-        "Delay": 2.39, 
-        "Design": "PACoGen", 
-        "Bits": 12
-    }, 
-    {
-        "Power": 2.1799, 
-        "Area": 1985.558417, 
-        "Energy": 5.406152, 
-        "Delay": 2.48, 
-        "Design": "PACoGen", 
-        "Bits": 14
-    }, 
-    {
-        "Power": 2.4828, 
-        "Area": 2231.57762, 
-        "Energy": 6.629076, 
-        "Delay": 2.67, 
+        "Power": 4.6095, 
+        "Area": 3148.387216, 
+        "Energy": 11.754225, 
+        "Delay": 2.55, 
         "Design": "PACoGen", 
         "Bits": 16
     }, 
     {
-        "Power": 3.1196, 
-        "Area": 2953.641619, 
-        "Energy": 9.452388, 
-        "Delay": 3.03, 
+        "Power": 18.3376, 
+        "Area": 10309.992072, 
+        "Energy": 81.969072, 
+        "Delay": 4.47, 
         "Design": "PACoGen", 
-        "Bits": 18
+        "Bits": 32
     }, 
     {
-        "Power": 3.4392, 
-        "Area": 3217.771219, 
-        "Energy": 10.867872, 
-        "Delay": 3.16, 
-        "Design": "PACoGen", 
-        "Bits": 20
+        "Power": 0.6346, 
+        "Area": 557.188803, 
+        "Energy": 0.894786, 
+        "Delay": 1.41, 
+        "Design": "FloPosit", 
+        "Bits": 8
     }, 
     {
-        "Power": 3.969, 
-        "Area": 3643.012826, 
-        "Energy": 13.45491, 
-        "Delay": 3.39, 
-        "Design": "PACoGen", 
-        "Bits": 22
+        "Power": 3.1695, 
+        "Area": 2060.116811, 
+        "Energy": 8.17731, 
+        "Delay": 2.58, 
+        "Design": "FloPosit", 
+        "Bits": 16
     }, 
     {
-        "Power": 4.32, 
-        "Area": 3935.366427, 
-        "Energy": 15.0336, 
-        "Delay": 3.48, 
-        "Design": "PACoGen", 
-        "Bits": 24
+        "Power": 15.3768, 
+        "Area": 8132.980841, 
+        "Energy": 67.811688, 
+        "Delay": 4.41, 
+        "Design": "FloPosit", 
+        "Bits": 32
     }, 
     {
-        "Power": 4.6503, 
-        "Area": 4230.542427, 
-        "Energy": 17.020098, 
-        "Delay": 3.66, 
-        "Design": "PACoGen", 
-        "Bits": 26
+        "Power": 0.7394, 
+        "Area": 545.664, 
+        "Energy": 0.894674, 
+        "Delay": 1.21, 
+        "Design": "MARTo", 
+        "Bits": 8
     }, 
     {
-        "Power": 4.9715, 
-        "Area": 4529.95203, 
-        "Energy": 18.344835, 
+        "Power": 3.0953, 
+        "Area": 1962.273608, 
+        "Energy": 6.438224, 
+        "Delay": 2.08, 
+        "Design": "MARTo", 
+        "Bits": 16
+    }, 
+    {
+        "Power": 14.4026, 
+        "Area": 7690.334447, 
+        "Energy": 49.544944, 
+        "Delay": 3.44, 
+        "Design": "MARTo", 
+        "Bits": 32
+    }, 
+    {
+        "Power": 0.6639, 
+        "Area": 516.499201, 
+        "Energy": 0.703734, 
+        "Delay": 1.06, 
+        "Design": "Proposed", 
+        "Bits": 8
+    }, 
+    {
+        "Power": 3.0313, 
+        "Area": 1883.952011, 
+        "Energy": 6.244478, 
+        "Delay": 2.06, 
+        "Design": "Proposed", 
+        "Bits": 16
+    }, 
+    {
+        "Power": 15.3295, 
+        "Area": 8353.128042, 
+        "Energy": 56.565855, 
         "Delay": 3.69, 
-        "Design": "PACoGen", 
-        "Bits": 28
-    }, 
-    {
-        "Power": 5.3295, 
-        "Area": 4841.121628, 
-        "Energy": 20.67846, 
-        "Delay": 3.88, 
-        "Design": "PACoGen", 
-        "Bits": 30
-    }, 
-    {
-        "Power": 5.6565, 
-        "Area": 5144.764831, 
-        "Energy": 23.021955, 
-        "Delay": 4.07, 
-        "Design": "PACoGen", 
+        "Design": "Proposed", 
         "Bits": 32
     }
 ]

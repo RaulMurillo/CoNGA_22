@@ -1,0 +1,26 @@
+[
+	{
+		"Design": "Proposed",
+		"Bits": 8,
+		"Area": 516.499201,
+		"Power": 0.6639,
+		"Delay": 1.06,
+		"Energy": 0.703734
+	},
+	{
+		"Design": "Proposed",
+		"Bits": 16,
+		"Area": 1883.952011,
+		"Power": 3.0313,
+		"Delay": 2.06,
+		"Energy": 6.244478
+	},
+	{
+		"Design": "Proposed",
+		"Bits": 32,
+		"Area": 8353.128042,
+		"Power": 15.3295,
+		"Delay": 3.69,
+		"Energy": 56.565855
+	}
+]
