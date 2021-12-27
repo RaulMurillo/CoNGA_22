@@ -5,7 +5,7 @@ echo "My area report script"
 touch results/area.csv
 R="$PWD/results/area.csv"
 
-for w in {8..32..2}
+for w in 8 16 32
 do
   for es in {2..2}
   do

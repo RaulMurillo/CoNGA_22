@@ -1,0 +1,26 @@
+[
+	{
+		"Design": "FloPosit",
+		"Bits": 8,
+		"Area": 688.430403,
+		"Power": 0.6920,
+		"Delay": 1.95,
+		"Energy": 1.3494
+	},
+	{
+		"Design": "FloPosit",
+		"Bits": 16,
+		"Area": 1481.995205,
+		"Power": 1.6927,
+		"Delay": 2.92,
+		"Energy": 4.942684
+	},
+	{
+		"Design": "FloPosit",
+		"Bits": 32,
+		"Area": 3393.230403,
+		"Power": 4.1340,
+		"Delay": 4.79,
+		"Energy": 19.80186
+	}
+]

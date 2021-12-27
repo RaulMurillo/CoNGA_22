@@ -6,8 +6,8 @@ echo "My dc_shell script"
 # #dirs=(N17..)
 # dirs2=(Use_hm_0 Use_hm_1)
 
-      
-for w in {8..32..2}
+
+for w in 8 16 32
 do
 	for es in {2..2}
 	do

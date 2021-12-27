@@ -1,0 +1,26 @@
+[
+	{
+		"Design": "PACoGen",
+		"Bits": 8,
+		"Area": 1043.817606,
+		"Power": 1.2546,
+		"Delay": 1.50,
+		"Energy": 1.8819
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 16,
+		"Area": 3148.387216,
+		"Power": 4.6095,
+		"Delay": 2.55,
+		"Energy": 11.754225
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 32,
+		"Area": 10309.992072,
+		"Power": 18.3376,
+		"Delay": 4.47,
+		"Energy": 81.969072
+	}
+]

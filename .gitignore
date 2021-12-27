@@ -1,0 +1,13 @@
+# Synopsys generated files
+*.log
+*.syn
+*.mr
+*.svf
+*.pvl
+*.report
+
+ARCH/
+ENTI/
+
+# other
+venv/

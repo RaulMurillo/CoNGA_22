@@ -5,7 +5,7 @@ echo "My timing report script"
 touch results/delay.csv
 R="$PWD/results/delay.csv"
 
-for w in {8..32..2}
+for w in 8 16 32
 do
   for es in {2..2}
   do
