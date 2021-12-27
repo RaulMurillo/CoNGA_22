@@ -462,7 +462,7 @@ signal z :  std_logic;
 -- signal inf :  std_logic;
 signal frac_mult :  std_logic_vector(55 downto 0);
 signal ovf_m :  std_logic;
--- signal normFrac :  std_logic_vector(56 downto 0);
+signal normFrac :  std_logic_vector(56 downto 0);
 signal sf_mult :  std_logic_vector(8 downto 0);
 signal sf_sign :  std_logic;
 signal nzero :  std_logic;
@@ -530,7 +530,7 @@ RegimeAns_tmp <= sf_mult(7 downto 2);
 with sf_sign  select  RegimeAns<=
    (NOT RegimeAns_tmp) + 1 when '1',
    RegimeAns_tmp when '0',
-   "------" when others;result
+   "------" when others;
    -- Check for Regime overflow
 reg_ovf <= '1' when RegimeAns > "011110" else '0';
 with reg_ovf  select  FinalRegime <=

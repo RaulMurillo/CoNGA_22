@@ -1927,7 +1927,7 @@ architecture arch of PositMult is
 -- signal Y_sf :  std_logic_vector(7 downto 0);
 -- signal Y_f :  std_logic_vector(26 downto 0);
 -- signal Y_nzn :  std_logic;
--- signal XY_nzn :  std_logic;
+signal XY_nzn_tmp :  std_logic;
 signal X_nar :  std_logic;
 signal Y_nar :  std_logic;
 signal XX_f :  std_logic_vector(28 downto 0);
@@ -1960,7 +1960,7 @@ begin
    --               Sign => Y_sgn);
 -------------------------------- Multiply X & Y --------------------------------
    -- Sign and Special Cases Computation
-   XY_nzn <= X_nzn AND Y_nzn;
+   XY_nzn_tmp <= X_nzn AND Y_nzn;
    X_nar <= X_sgn AND NOT(X_nzn);
    Y_nar <= Y_sgn AND NOT(Y_nzn);
    -- Multiply the fractions (using FloPoCo IntMultiplier)
@@ -1978,10 +1978,11 @@ begin
    XY_ovfBits <= XY_ovfExtra & XY_ovf;
    XY_sf <= std_logic_vector(unsigned(X_sf(X_sf'high) & X_sf) + unsigned(Y_sf(Y_sf'high) & Y_sf) + unsigned(XY_ovfBits));
 ----------------------------- Generate final posit -----------------------------
-   XY_finalSgn <= XY_sgn when XY_nzn = '1' else (X_nar OR Y_nar);
+   XY_finalSgn <= XY_sgn when XY_nzn_tmp = '1' else (X_nar OR Y_nar);
    XY_frac <= XY_normF(54 downto 28);
    grd <= XY_normF(27);
    stk <= '0' when (XY_normF(26 downto 0) = "000000000000000000000000000") else '1';
+   XY_nzn <= XY_nzn_tmp;
    -- PositEncoder: PositFastEncoder_32_2_F0_uid75
    --    port map ( Frac => XY_frac,
    --               Guard => grd,

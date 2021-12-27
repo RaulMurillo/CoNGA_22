@@ -64,7 +64,7 @@ begin
 end architecture;
 
 --------------------------------------------------------------------------------
---                       PositFastDecoder_32_2_F0_uid4
+--                       PositDecoder
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
 -- All rights reserved 
@@ -84,7 +84,7 @@ library std;
 use std.textio.all;
 library work;
 
-entity PositFastDecoder_32_2_F0_uid4 is
+entity PositDecoder is
     port (X : in  std_logic_vector(31 downto 0);
           Sign : out  std_logic;
           SF : out  std_logic_vector(7 downto 0);
@@ -92,7 +92,7 @@ entity PositFastDecoder_32_2_F0_uid4 is
           NZN : out  std_logic   );
 end entity;
 
-architecture arch of PositFastDecoder_32_2_F0_uid4 is
+architecture arch of PositDecoder is
    component Normalizer_ZO_30_30_30_F0_uid6 is
       port ( X : in  std_logic_vector(29 downto 0);
              OZb : in  std_logic;

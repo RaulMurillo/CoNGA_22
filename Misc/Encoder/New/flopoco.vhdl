@@ -60,7 +60,7 @@ begin
 end architecture;
 
 --------------------------------------------------------------------------------
---                       PositFastEncoder_32_2_F0_uid16
+--                       PositEncoder
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
 -- All rights reserved 
@@ -80,7 +80,7 @@ library std;
 use std.textio.all;
 library work;
 
-entity PositFastEncoder_32_2_F0_uid16 is
+entity PositEncoder is
     port (Sign : in  std_logic;
           SF : in  std_logic_vector(8 downto 0);
           Frac : in  std_logic_vector(26 downto 0);
@@ -90,7 +90,7 @@ entity PositFastEncoder_32_2_F0_uid16 is
           R : out  std_logic_vector(31 downto 0)   );
 end entity;
 
-architecture arch of PositFastEncoder_32_2_F0_uid16 is
+architecture arch of PositEncoder is
    component RightShifterSticky31_by_max_31_F0_uid18 is
       port ( X : in  std_logic_vector(30 downto 0);
              S : in  std_logic_vector(4 downto 0);
