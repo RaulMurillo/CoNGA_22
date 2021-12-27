@@ -6,5 +6,5 @@ mkdir -p results
 ./myPowerScript.sh
 ./myTimeScript.sh
 
-python ../../elaborate_json_misc.py $PWD/results Adder
+python ../../elaborate_json_misc.py $PWD/results Multiplier
 
