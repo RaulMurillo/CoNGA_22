@@ -504,7 +504,7 @@ library std;
 use std.textio.all;
 library work;
 
-entity PositAdd2_32_2_F0_uid2 is
+entity PositAdd is
     port (--X : in  std_logic_vector(31 downto 0);
           --Y : in  std_logic_vector(31 downto 0);
           --R : out  std_logic_vector(31 downto 0)
@@ -529,7 +529,7 @@ entity PositAdd2_32_2_F0_uid2 is
           nzero : out std_logic   );
 end entity;
 
--- architecture arch of PositAdd2_32_2_F0_uid2 is
+architecture arch of PositAdd is
 --    component PositDecoder_32_2_F0_uid4 is
 --       port ( Input : in  std_logic_vector(31 downto 0);
 --              Sign : out  std_logic;

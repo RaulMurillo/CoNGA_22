@@ -592,7 +592,7 @@ entity PositAdder is
           Y_sf : in  std_logic_vector(7 downto 0);
           Y_f : in  std_logic_vector(26 downto 0);
           Y_nzn : in  std_logic;
-          Sign : out  std_logic;
+          FinalSign : out  std_logic;
           SF : out  std_logic_vector(8 downto 0);
           Frac : out  std_logic_vector(26 downto 0);
           Guard : out  std_logic;
@@ -769,7 +769,7 @@ begin
    Guard <= grd;
    NZN <= XY_nzn;
    SF <= add_sf;
-   Sign <= sign;
+   FinalSign <= sign;
    Sticky <= stk;
 --    PositEncoder: PositFastEncoder_32_2_F0_uid16
 --       port map ( Frac => norm_frac,
