@@ -1,7 +1,7 @@
 [
 	{
 		"Component": "Adder",
-		"Design": Old,
+		"Design": "Old",
 		"Area": 1387.915205,
 		"Power": 1.4425,
 		"Delay": 2.95,
@@ -9,7 +9,7 @@
 	},
 	{
 		"Component": "Adder",
-		"Design": New,
+		"Design": "New",
 		"Area": 1274.548813,
 		"Power": 1.2428,
 		"Delay": 2.50,

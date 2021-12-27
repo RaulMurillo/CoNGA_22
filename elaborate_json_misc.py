@@ -21,7 +21,7 @@ if __name__=="__main__":
 		for i in range(lines):
 			o_file.write("\t{\n")
 			o_file.write("\t\t\"Component\": \""+component+"\",\n")
-			o_file.write("\t\t\"Design\": "+area_csv[i][0]+",\n")
+			o_file.write("\t\t\"Design\": \""+area_csv[i][0]+"\",\n")
 			o_file.write("\t\t\"Area\": "+area_csv[i][1]+",\n")
 			o_file.write("\t\t\"Power\": "+power_csv[i][1]+",\n")
 			o_file.write("\t\t\"Delay\": "+delay_csv[i][1]+",\n")

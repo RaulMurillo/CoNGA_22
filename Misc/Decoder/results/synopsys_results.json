@@ -1,7 +1,7 @@
 [
 	{
 		"Component": "Decoder",
-		"Design": Old,
+		"Design": "Old",
 		"Area": 591.057600,
 		"Power": 0.5896,
 		"Delay": 1.47,
@@ -9,7 +9,7 @@
 	},
 	{
 		"Component": "Decoder",
-		"Design": New,
+		"Design": "New",
 		"Area": 392.078402,
 		"Power": 0.2687,
 		"Delay": 0.88,

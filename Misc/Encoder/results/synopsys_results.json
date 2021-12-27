@@ -1,7 +1,7 @@
 [
 	{
 		"Component": "Encoder",
-		"Design": Old,
+		"Design": "Old",
 		"Area": 838.252799,
 		"Power": 0.8624,
 		"Delay": 1.10,
@@ -9,7 +9,7 @@
 	},
 	{
 		"Component": "Encoder",
-		"Design": New,
+		"Design": "New",
 		"Area": 564.244803,
 		"Power": 0.5120,
 		"Delay": 0.93,
