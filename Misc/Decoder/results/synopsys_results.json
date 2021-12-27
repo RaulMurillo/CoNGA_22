@@ -1,0 +1,18 @@
+[
+	{
+		"Component": "Decoder",
+		"Design": Old,
+		"Area": 591.057600,
+		"Power": 0.5896,
+		"Delay": 1.47,
+		"Energy": 0.866712
+	},
+	{
+		"Component": "Decoder",
+		"Design": New,
+		"Area": 392.078402,
+		"Power": 0.2687,
+		"Delay": 0.88,
+		"Energy": 0.236456
+	}
+]

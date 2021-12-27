@@ -1,0 +1,18 @@
+[
+	{
+		"Component": "Encoder",
+		"Design": Old,
+		"Area": 838.252799,
+		"Power": 0.8624,
+		"Delay": 1.10,
+		"Energy": 0.94864
+	},
+	{
+		"Component": "Encoder",
+		"Design": New,
+		"Area": 564.244803,
+		"Power": 0.5120,
+		"Delay": 0.93,
+		"Energy": 0.47616
+	}
+]

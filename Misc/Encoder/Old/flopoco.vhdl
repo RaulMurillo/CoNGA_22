@@ -515,7 +515,7 @@ entity PositEncoder is
           R : out  std_logic_vector(31 downto 0)   );
 end entity;
 
--- architecture arch of PositAdd2_32_2_F0_uid2 is
+architecture arch of PositEncoder is
 --    component PositDecoder_32_2_F0_uid4 is
 --       port ( Input : in  std_logic_vector(31 downto 0);
 --              Sign : out  std_logic;

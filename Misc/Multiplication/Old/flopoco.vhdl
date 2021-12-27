@@ -540,7 +540,7 @@ with reg_ovf  select  FinalRegime <=
 final_sf_sign <= sf_sign;
 final_nzero <= nzero;
 final_normFrac <= normFrac(54 downto 28);
-final_grd <= normFrac(27));
+final_grd <= normFrac(27);
 final_stk <= '0' when (normFrac(26 downto 0) = "000000000000000000000000000") else '1';
 -- ------------------------------- Packing Stage 1 -------------------------------
 -- with sf_sign  select  input_shifter<=

@@ -1,0 +1,18 @@
+[
+	{
+		"Component": "Multiplier",
+		"Design": Old,
+		"Area": 5714.184042,
+		"Power": 11.0971,
+		"Delay": 1.85,
+		"Energy": 20.529635
+	},
+	{
+		"Component": "Multiplier",
+		"Design": New,
+		"Area": 7005.432034,
+		"Power": 12.9968,
+		"Delay": 1.92,
+		"Energy": 24.953856
+	}
+]
