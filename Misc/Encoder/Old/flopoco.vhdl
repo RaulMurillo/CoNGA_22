@@ -600,6 +600,8 @@ signal lzCount :  std_logic_vector(4 downto 0);
 signal sf_add :  std_logic_vector(7 downto 0);
 -- signal nzero :  std_logic;
 -- signal FinalExp :  std_logic_vector(1 downto 0);
+signal RegimeAns :  std_logic_vector(5 downto 0);
+signal reg_ovf :  std_logic;
 signal RegimeAns_tmp :  std_logic_vector(5 downto 0);
 signal reg_sign :  std_logic;
 -- signal FinalRegime :  std_logic_vector(5 downto 0);
@@ -728,9 +730,17 @@ with reg_sign  select  input_shifter<=
    '0' & nzero    & FinalExp    & normFrac(28 downto 0) & S_tmp when '1',
    nzero & '0'    & FinalExp    & normFrac(28 downto 0) & S_tmp when '0',
    "----------------------------------" when others;
+
+-- Check for Regime overflow
+reg_ovf <= '1' when FinalRegime > "011110" else '0';
+with reg_ovf  select  RegimeAns <=
+   "011110" when '1',
+   FinalRegime when '0',
+   "------" when others;
+
 with reg_sign  select  shift_offset <=
-   FinalRegime(4 downto 0) - 1 when '1',
-   FinalRegime(4 downto 0) when '0',
+   RegimeAns(4 downto 0) - 1 when '1',
+   RegimeAns(4 downto 0) when '0',
    "-----" when others;
 pad<= input_shifter(input_shifter'high);
    right_signed_shifter: RightShifterSticky34_by_max_31_F0_uid16

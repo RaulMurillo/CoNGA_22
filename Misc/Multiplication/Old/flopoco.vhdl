@@ -413,27 +413,27 @@ entity PositMult is
 end entity;
 
 architecture arch of PositMult is
-   component PositDecoder_32_2_F0_uid4 is
-      port ( Input : in  std_logic_vector(31 downto 0);
-             Sign : out  std_logic;
-             Reg : out  std_logic_vector(5 downto 0);
-             Exp : out  std_logic_vector(1 downto 0);
-             Frac : out  std_logic_vector(27 downto 0);
-             z : out  std_logic;
-             inf : out  std_logic;
-             Abs_in : out  std_logic_vector(30 downto 0)   );
-   end component;
+   -- component PositDecoder_32_2_F0_uid4 is
+   --    port ( Input : in  std_logic_vector(31 downto 0);
+   --           Sign : out  std_logic;
+   --           Reg : out  std_logic_vector(5 downto 0);
+   --           Exp : out  std_logic_vector(1 downto 0);
+   --           Frac : out  std_logic_vector(27 downto 0);
+   --           z : out  std_logic;
+   --           inf : out  std_logic;
+   --           Abs_in : out  std_logic_vector(30 downto 0)   );
+   -- end component;
 
-   component PositDecoder_32_2_F0_uid8 is
-      port ( Input : in  std_logic_vector(31 downto 0);
-             Sign : out  std_logic;
-             Reg : out  std_logic_vector(5 downto 0);
-             Exp : out  std_logic_vector(1 downto 0);
-             Frac : out  std_logic_vector(26 downto 0);
-             z : out  std_logic;
-             inf : out  std_logic;
-             Abs_in : out  std_logic_vector(30 downto 0)   );
-   end component;
+   -- component PositDecoder_32_2_F0_uid8 is
+   --    port ( Input : in  std_logic_vector(31 downto 0);
+   --           Sign : out  std_logic;
+   --           Reg : out  std_logic_vector(5 downto 0);
+   --           Exp : out  std_logic_vector(1 downto 0);
+   --           Frac : out  std_logic_vector(26 downto 0);
+   --           z : out  std_logic;
+   --           inf : out  std_logic;
+   --           Abs_in : out  std_logic_vector(30 downto 0)   );
+   -- end component;
 
    component RightShifterSticky59_by_max_31_F0_uid12 is
       port ( X : in  std_logic_vector(58 downto 0);
@@ -531,12 +531,7 @@ with sf_sign  select  RegimeAns<=
    (NOT RegimeAns_tmp) + 1 when '1',
    RegimeAns_tmp when '0',
    "------" when others;
-   -- Check for Regime overflow
-reg_ovf <= '1' when RegimeAns > "011110" else '0';
-with reg_ovf  select  FinalRegime <=
-   "011110" when '1',
-   RegimeAns when '0',
-   "------" when others;
+FinalRegime <= RegimeAns;
 final_sf_sign <= sf_sign;
 final_nzero <= nzero;
 final_normFrac <= normFrac(54 downto 28);
