@@ -2,10 +2,10 @@
 	{
 		"Component": "Encoder",
 		"Design": "Old",
-		"Area": 838.252799,
-		"Power": 0.8624,
-		"Delay": 1.10,
-		"Energy": 0.94864
+		"Area": 843.662399,
+		"Power": 0.8172,
+		"Delay": 1.14,
+		"Energy": 0.931608
 	},
 	{
 		"Component": "Encoder",
