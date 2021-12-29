@@ -5,14 +5,13 @@
 #include "posit/posit_dim.hpp"
 #include "posit/posit_decoder.hpp"
 #include "posit/posit_encoder.hpp"
-#include "posit/posit_mul.hpp"
-#include "posit/value_prod_conversions.hpp"
+#include "posit/posit_add.hpp"
 
 constexpr unsigned int N = 16;
 constexpr unsigned int WES = 1;
 constexpr unsigned int ENC_SIZE = N;
 
-ap_uint<ENC_SIZE> posit_comp_mul(
+ap_uint<ENC_SIZE> posit_comp_add(
 	PositEncoding<N, WES, hint::VivadoWrapper> in1,
 	PositEncoding<N, WES, hint::VivadoWrapper> in2
 )
@@ -20,13 +19,13 @@ ap_uint<ENC_SIZE> posit_comp_mul(
 #pragma HLS LATENCY max=0
 	auto decoded1 = posit_decoder(in1);
 	auto decoded2 = posit_decoder(in2);
-	auto mul = posit_mul(decoded1, decoded2);
-	auto final = posit_encoder(PositProd_to_PositIF(mul));
+	auto add = posit_add(decoded1, decoded2);
+	auto final = posit_encoder(add);
 	return final.unravel();
 }
 
 int main(void)
 {
-	posit_comp_mul({{17}}, {{78}});
+	posit_comp_add({{17}}, {{78}});
 	return 0;
 }
