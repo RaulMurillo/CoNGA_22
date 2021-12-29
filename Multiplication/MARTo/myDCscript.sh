@@ -9,9 +9,10 @@ echo "My dc_shell script"
 
 for w in 8 16 32
 do
-	for es in {2..2}
+	for es in {1..2}
 	do
-		cp s1 "mult_${w}_${es}"
+	if [[ $w -ne 32 || $es -ne 1 ]]; then
+		cp s1 "mult_${w}_${es}/"
 		cd "mult_${w}_${es}"
 		echo ""
 		echo ""
@@ -21,6 +22,7 @@ do
 		dc_shell-t -f s1
 		#ls *.vhdl
 		cd ..
+	fi
 	done
 done
 

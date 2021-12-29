@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf results
 mkdir -p results
 
 ./myAreaScript.sh
