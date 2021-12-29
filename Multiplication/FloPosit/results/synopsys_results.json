@@ -1,6 +1,6 @@
 [
 	{
-		"Design": "FloPosit",
+		"Design": "Flo-Posit",
 		"Bits": 8,
 		"Exp": 1,
 		"Area": 616.224003,
@@ -9,7 +9,7 @@
 		"Energy": 1.084272
 	},
 	{
-		"Design": "FloPosit",
+		"Design": "Flo-Posit",
 		"Bits": 8,
 		"Exp": 2,
 		"Area": 557.188803,
@@ -18,7 +18,7 @@
 		"Energy": 0.894786
 	},
 	{
-		"Design": "FloPosit",
+		"Design": "Flo-Posit",
 		"Bits": 16,
 		"Exp": 1,
 		"Area": 2250.628813,
@@ -27,7 +27,7 @@
 		"Energy": 9.66398
 	},
 	{
-		"Design": "FloPosit",
+		"Design": "Flo-Posit",
 		"Bits": 16,
 		"Exp": 2,
 		"Area": 2060.116811,
@@ -36,7 +36,7 @@
 		"Energy": 8.17731
 	},
 	{
-		"Design": "FloPosit",
+		"Design": "Flo-Posit",
 		"Bits": 32,
 		"Exp": 2,
 		"Area": 8132.980841,

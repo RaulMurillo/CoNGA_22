@@ -7,5 +7,5 @@ mkdir -p results
 ./myPowerScript.sh
 ./myTimeScript.sh
 
-python ../../elaborate_json.py $PWD/results FloPosit
+python ../../elaborate_json.py $PWD/results Flo-Posit
 
