@@ -1,0 +1,28 @@
+free -design
+#------------------------
+set MYLIB /home/ramuri01/synLibs/TSMCHOME/digital/Back_End/milkyway/tcbn45gsbwp12t_200a/frame_only_VHV_0d5_0/tcbn45gsbwp12t/LM/tcbn45gsbwp12tml.db
+set target_library $MYLIB
+set link_library $MYLIB
+read_db $MYLIB
+#------------------------
+set power_preserve_rtl_hier_names true
+analyze -format vhdl -lib WORK "./posit_comp_mul_aux.vhd"
+analyze -format vhdl -lib WORK "./posit_comp_mul.vhd"
+#elaborate posit_comp_mul -arch "estr" -lib WORK -update
+elaborate posit_comp_mul
+#rtl2saif -output "posit_comp_mul.RT.saif" -design "posit_comp_mul"
+uniquify
+#set_max_delay 1 [all_outputs]
+set_switching_activity -type inputs -toggle_rate 0.1
+set_switching_activity -type registers -toggle_rate 0.1
+compile
+#derive_timing_constraints
+set_wire_load_mode top
+compile
+report_area > "area.report"
+report_area -hierarchy > "area.hier.report"
+report_timing > "timing.report"
+#report_timing -to Z[31] > "timing.cp.report"
+report_power > "power.report"
+report_power -hierarchy > "power.hier.report"
+exit

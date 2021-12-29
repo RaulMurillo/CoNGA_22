@@ -22,7 +22,7 @@ if __name__=="__main__":
 			o_file.write("\t{\n")
 			o_file.write("\t\t\"Design\": \""+design+"\",\n")
 			o_file.write("\t\t\"Bits\": "+area_csv[i][0]+",\n")
-			# o_file.write("\t\t\"Exp\": "+area_csv[i][1]+",\n")
+			o_file.write("\t\t\"Exp\": "+area_csv[i][1]+",\n")
 			o_file.write("\t\t\"Area\": "+area_csv[i][2]+",\n")
 			o_file.write("\t\t\"Power\": "+power_csv[i][2]+",\n")
 			o_file.write("\t\t\"Delay\": "+delay_csv[i][2]+",\n")
