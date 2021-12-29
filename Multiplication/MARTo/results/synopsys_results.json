@@ -2,6 +2,16 @@
 	{
 		"Design": "MARTo",
 		"Bits": 8,
+		"Exp": 1,
+		"Area": 615.753601,
+		"Power": 0.8708,
+		"Delay": 1.24,
+		"Energy": 1.079792
+	},
+	{
+		"Design": "MARTo",
+		"Bits": 8,
+		"Exp": 2,
 		"Area": 545.664000,
 		"Power": 0.7394,
 		"Delay": 1.21,
@@ -10,6 +20,16 @@
 	{
 		"Design": "MARTo",
 		"Bits": 16,
+		"Exp": 1,
+		"Area": 2170.896009,
+		"Power": 3.5344,
+		"Delay": 2.14,
+		"Energy": 7.563616
+	},
+	{
+		"Design": "MARTo",
+		"Bits": 16,
+		"Exp": 2,
 		"Area": 1962.273608,
 		"Power": 3.0953,
 		"Delay": 2.08,
@@ -18,6 +38,7 @@
 	{
 		"Design": "MARTo",
 		"Bits": 32,
+		"Exp": 2,
 		"Area": 7690.334447,
 		"Power": 14.4026,
 		"Delay": 3.44,

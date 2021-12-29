@@ -350,7 +350,7 @@ begin
 end architecture;
 
 --------------------------------------------------------------------------------
---                           PositMult_16_1_F0_uid2
+--                           PositMult
 -- VHDL generated for Kintex7 @ 0MHz
 -- This operator is part of the Infinite Virtual Library FloPoCoLib
 -- All rights reserved 
@@ -370,13 +370,13 @@ library std;
 use std.textio.all;
 library work;
 
-entity PositMult_16_1_F0_uid2 is
+entity PositMult is
     port (X : in  std_logic_vector(15 downto 0);
           Y : in  std_logic_vector(15 downto 0);
           R : out  std_logic_vector(15 downto 0)   );
 end entity;
 
-architecture arch of PositMult_16_1_F0_uid2 is
+architecture arch of PositMult is
    component PositDecoder_16_1_F0_uid4 is
       port ( Input : in  std_logic_vector(15 downto 0);
              Sign : out  std_logic;

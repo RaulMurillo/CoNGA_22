@@ -2,6 +2,16 @@
 	{
 		"Design": "FloPosit",
 		"Bits": 8,
+		"Exp": 1,
+		"Area": 616.224003,
+		"Power": 0.7376,
+		"Delay": 1.47,
+		"Energy": 1.084272
+	},
+	{
+		"Design": "FloPosit",
+		"Bits": 8,
+		"Exp": 2,
 		"Area": 557.188803,
 		"Power": 0.6346,
 		"Delay": 1.41,
@@ -10,6 +20,16 @@
 	{
 		"Design": "FloPosit",
 		"Bits": 16,
+		"Exp": 1,
+		"Area": 2250.628813,
+		"Power": 3.5270,
+		"Delay": 2.74,
+		"Energy": 9.66398
+	},
+	{
+		"Design": "FloPosit",
+		"Bits": 16,
+		"Exp": 2,
 		"Area": 2060.116811,
 		"Power": 3.1695,
 		"Delay": 2.58,
@@ -18,6 +38,7 @@
 	{
 		"Design": "FloPosit",
 		"Bits": 32,
+		"Exp": 2,
 		"Area": 8132.980841,
 		"Power": 15.3768,
 		"Delay": 4.41,

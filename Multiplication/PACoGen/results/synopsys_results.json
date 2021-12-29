@@ -2,6 +2,16 @@
 	{
 		"Design": "PACoGen",
 		"Bits": 8,
+		"Exp": 1,
+		"Area": 1154.596807,
+		"Power": 1.4514,
+		"Delay": 1.55,
+		"Energy": 2.24967
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 8,
+		"Exp": 2,
 		"Area": 1043.817606,
 		"Power": 1.2546,
 		"Delay": 1.50,
@@ -10,6 +20,16 @@
 	{
 		"Design": "PACoGen",
 		"Bits": 16,
+		"Exp": 1,
+		"Area": 3355.128017,
+		"Power": 5.0461,
+		"Delay": 2.53,
+		"Energy": 12.766633
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 16,
+		"Exp": 2,
 		"Area": 3148.387216,
 		"Power": 4.6095,
 		"Delay": 2.55,
@@ -18,6 +38,7 @@
 	{
 		"Design": "PACoGen",
 		"Bits": 32,
+		"Exp": 2,
 		"Area": 10309.992072,
 		"Power": 18.3376,
 		"Delay": 4.47,

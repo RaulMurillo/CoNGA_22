@@ -1,98 +1,182 @@
 [
     {
-        "Design": "PACoGen",
-        "Bits": 8,
-        "Area": 1084.036811,
-        "Power": 1.1753,
-        "Delay": 1.92,
-        "Energy": 2.256576
-    },
+        "Power": 1.1954, 
+        "Area": 1072.041611, 
+        "Energy": 2.163674, 
+        "Delay": 1.81, 
+        "Design": "PACoGen", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
     {
-        "Design": "PACoGen",
-        "Bits": 16,
-        "Area": 2231.57762,
-        "Power": 2.4828,
-        "Delay": 2.67,
-        "Energy": 6.629076
-    },
+        "Power": 1.1753, 
+        "Area": 1084.036811, 
+        "Energy": 2.256576, 
+        "Delay": 1.92, 
+        "Design": "PACoGen", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
     {
-        "Design": "PACoGen",
-        "Bits": 32,
-        "Area": 5144.764831,
-        "Power": 5.6565,
-        "Delay": 4.07,
-        "Energy": 23.021955
-    },
+        "Power": 2.4366, 
+        "Area": 2207.822421, 
+        "Energy": 6.57882, 
+        "Delay": 2.7, 
+        "Design": "PACoGen", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
     {
-        "Design": "FloPosit",
-        "Bits": 8,
-        "Area": 688.430403,
-        "Power": 0.692,
-        "Delay": 1.95,
-        "Energy": 1.3494
-    },
+        "Power": 2.4828, 
+        "Area": 2231.57762, 
+        "Energy": 6.629076, 
+        "Delay": 2.67, 
+        "Design": "PACoGen", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
     {
-        "Design": "FloPosit",
-        "Bits": 16,
-        "Area": 1481.995205,
-        "Power": 1.6927,
-        "Delay": 2.92,
-        "Energy": 4.942684
-    },
+        "Power": 5.6565, 
+        "Area": 5144.764831, 
+        "Energy": 23.021955, 
+        "Delay": 4.07, 
+        "Design": "PACoGen", 
+        "Exp": 2, 
+        "Bits": 32
+    }, 
     {
-        "Design": "FloPosit",
-        "Bits": 32,
-        "Area": 3393.230403,
-        "Power": 4.134,
-        "Delay": 4.79,
-        "Energy": 19.80186
-    },
+        "Power": 0.7207, 
+        "Area": 683.020804, 
+        "Energy": 1.542298, 
+        "Delay": 2.14, 
+        "Design": "FloPosit", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
     {
-        "Design": "MARTo",
-        "Bits": 8,
-        "Area": 556.718401,
-        "Power": 0.6257,
-        "Delay": 1.75,
-        "Energy": 1.094975
-    },
+        "Power": 0.692, 
+        "Area": 688.430403, 
+        "Energy": 1.3494, 
+        "Delay": 1.95, 
+        "Design": "FloPosit", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
     {
-        "Design": "MARTo",
-        "Bits": 16,
-        "Area": 1293.364804,
-        "Power": 1.4491,
-        "Delay": 2.45,
-        "Energy": 3.550295
-    },
+        "Power": 1.7047, 
+        "Area": 1500.811205, 
+        "Energy": 5.165241, 
+        "Delay": 3.03, 
+        "Design": "FloPosit", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
     {
-        "Design": "MARTo",
-        "Bits": 32,
-        "Area": 2929.651213,
-        "Power": 3.1911,
-        "Delay": 3.81,
-        "Energy": 12.158091
-    },
+        "Power": 1.6927, 
+        "Area": 1481.995205, 
+        "Energy": 4.942684, 
+        "Delay": 2.92, 
+        "Design": "FloPosit", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
     {
-        "Design": "Proposed",
-        "Bits": 8,
-        "Area": 576.240003,
-        "Power": 0.5908,
-        "Delay": 1.79,
-        "Energy": 1.057532
-    },
+        "Power": 4.134, 
+        "Area": 3393.230403, 
+        "Energy": 19.80186, 
+        "Delay": 4.79, 
+        "Design": "FloPosit", 
+        "Exp": 2, 
+        "Bits": 32
+    }, 
     {
-        "Design": "Proposed",
-        "Bits": 16,
-        "Area": 1176.705608,
-        "Power": 1.2216,
-        "Delay": 2.89,
-        "Energy": 3.530424
-    },
+        "Power": 0.659, 
+        "Area": 585.883201, 
+        "Energy": 1.15984, 
+        "Delay": 1.76, 
+        "Design": "MARTo", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
     {
-        "Design": "Proposed",
-        "Bits": 32,
-        "Area": 2622.95042,
-        "Power": 2.7736,
-        "Delay": 4.3,
-        "Energy": 11.92648
+        "Power": 0.6257, 
+        "Area": 556.718401, 
+        "Energy": 1.094975, 
+        "Delay": 1.75, 
+        "Design": "MARTo", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 1.5131, 
+        "Area": 1332.408004, 
+        "Energy": 3.449868, 
+        "Delay": 2.28, 
+        "Design": "MARTo", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 1.4491, 
+        "Area": 1293.364804, 
+        "Energy": 3.550295, 
+        "Delay": 2.45, 
+        "Design": "MARTo", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 3.1911, 
+        "Area": 2929.651213, 
+        "Energy": 12.158091, 
+        "Delay": 3.81, 
+        "Design": "MARTo", 
+        "Exp": 2, 
+        "Bits": 32
+    }, 
+    {
+        "Power": 0.6137, 
+        "Area": 596.937603, 
+        "Energy": 1.190578, 
+        "Delay": 1.94, 
+        "Design": "Proposed", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 0.5908, 
+        "Area": 576.240003, 
+        "Energy": 1.057532, 
+        "Delay": 1.79, 
+        "Design": "Proposed", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 1.2643, 
+        "Area": 1263.49441, 
+        "Energy": 3.653827, 
+        "Delay": 2.89, 
+        "Design": "Proposed", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 1.2216, 
+        "Area": 1176.705608, 
+        "Energy": 3.530424, 
+        "Delay": 2.89, 
+        "Design": "Proposed", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 2.7736, 
+        "Area": 2622.95042, 
+        "Energy": 11.92648, 
+        "Delay": 4.3, 
+        "Design": "Proposed", 
+        "Exp": 2, 
+        "Bits": 32
     }
 ]
