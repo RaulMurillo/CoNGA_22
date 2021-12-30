@@ -1,6 +1,6 @@
 [
 	{
-		"Design": "MARTo",
+		"Design": "MArTo",
 		"Bits": 8,
 		"Exp": 1,
 		"Area": 2219.817621,
@@ -9,7 +9,7 @@
 		"Energy": 1.905138
 	},
 	{
-		"Design": "MARTo",
+		"Design": "MArTo",
 		"Bits": 8,
 		"Exp": 2,
 		"Area": 2311.780822,
@@ -18,7 +18,7 @@
 		"Energy": 2.139039
 	},
 	{
-		"Design": "MARTo",
+		"Design": "MArTo",
 		"Bits": 16,
 		"Exp": 1,
 		"Area": 2276.971215,
@@ -27,7 +27,7 @@
 		"Energy": 3.3844
 	},
 	{
-		"Design": "MARTo",
+		"Design": "MArTo",
 		"Bits": 16,
 		"Exp": 2,
 		"Area": 2177.481614,
@@ -36,7 +36,7 @@
 		"Energy": 3.1644
 	},
 	{
-		"Design": "MARTo",
+		"Design": "MArTo",
 		"Bits": 32,
 		"Exp": 2,
 		"Area": 3133.099220,
