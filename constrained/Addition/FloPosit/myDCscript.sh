@@ -15,11 +15,11 @@ do
 		cp s1 "add_${w}_${es}/"
 		cd "add_${w}_${es}"
 		if [[ $w = 8 ]]; then
-			sed -i "s/set_max_delay 1/set_max_delay 1/g" s1
+			sed -i "s/set_max_delay 1/set_max_delay 0.5/g" s1
 		elif [[ $w = 16 ]]; then
-			sed -i "s/set_max_delay 1/set_max_delay 2/g" s1
+			sed -i "s/set_max_delay 1/set_max_delay 1/g" s1
 		elif [[ $w = 32 ]]; then
-			sed -i "s/set_max_delay 1/set_max_delay 3/g" s1
+			sed -i "s/set_max_delay 1/set_max_delay 2/g" s1
 		fi
 		echo ""
 		echo ""

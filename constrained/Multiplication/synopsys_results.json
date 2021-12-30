@@ -1,0 +1,182 @@
+[
+    {
+        "Power": 3.313, 
+        "Area": 2130.912023, 
+        "Energy": 2.61727, 
+        "Delay": 0.79, 
+        "Design": "PACoGen", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 3.328, 
+        "Area": 2096.102419, 
+        "Energy": 2.39616, 
+        "Delay": 0.72, 
+        "Design": "PACoGen", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 10.0377, 
+        "Area": 5986.780873, 
+        "Energy": 12.245994, 
+        "Delay": 1.22, 
+        "Design": "PACoGen", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 9.4341, 
+        "Area": 5708.068866, 
+        "Energy": 10.754874, 
+        "Delay": 1.14, 
+        "Design": "PACoGen", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 26.2249, 
+        "Area": 14025.68179, 
+        "Energy": 52.4498, 
+        "Delay": 2.0, 
+        "Design": "PACoGen", 
+        "Exp": 2, 
+        "Bits": 32
+    }, 
+    {
+        "Power": 2.3178, 
+        "Area": 1447.656016, 
+        "Energy": 1.205256, 
+        "Delay": 0.52, 
+        "Design": "Flo-Posit", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 2.1043, 
+        "Area": 1356.398413, 
+        "Energy": 1.05215, 
+        "Delay": 0.5, 
+        "Design": "Flo-Posit", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 8.1201, 
+        "Area": 4568.054456, 
+        "Energy": 8.201301, 
+        "Delay": 1.01, 
+        "Design": "Flo-Posit", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 7.6812, 
+        "Area": 4221.369648, 
+        "Energy": 7.758012, 
+        "Delay": 1.01, 
+        "Design": "Flo-Posit", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 25.5568, 
+        "Area": 12631.416182, 
+        "Energy": 47.791216, 
+        "Delay": 1.87, 
+        "Design": "Flo-Posit", 
+        "Exp": 2, 
+        "Bits": 32
+    }, 
+    {
+        "Power": 2.3703, 
+        "Area": 1351.694416, 
+        "Energy": 1.351071, 
+        "Delay": 0.57, 
+        "Design": "MARTo", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 2.5077, 
+        "Area": 1486.69921, 
+        "Energy": 1.278927, 
+        "Delay": 0.51, 
+        "Design": "MARTo", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 7.3634, 
+        "Area": 4004.280039, 
+        "Energy": 7.3634, 
+        "Delay": 1.0, 
+        "Design": "MARTo", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 7.2187, 
+        "Area": 3952.771238, 
+        "Energy": 7.2187, 
+        "Delay": 1.0, 
+        "Design": "MARTo", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 18.9867, 
+        "Area": 9922.617768, 
+        "Energy": 37.9734, 
+        "Delay": 2.0, 
+        "Design": "MARTo", 
+        "Exp": 2, 
+        "Bits": 32
+    }, 
+    {
+        "Power": 2.5671, 
+        "Area": 1588.305616, 
+        "Energy": 1.437576, 
+        "Delay": 0.56, 
+        "Design": "Proposed", 
+        "Exp": 1, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 2.256, 
+        "Area": 1382.976011, 
+        "Energy": 1.19568, 
+        "Delay": 0.53, 
+        "Design": "Proposed", 
+        "Exp": 2, 
+        "Bits": 8
+    }, 
+    {
+        "Power": 7.4467, 
+        "Area": 3999.576045, 
+        "Energy": 7.670101, 
+        "Delay": 1.03, 
+        "Design": "Proposed", 
+        "Exp": 1, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 6.3778, 
+        "Area": 3603.264038, 
+        "Energy": 6.3778, 
+        "Delay": 1.0, 
+        "Design": "Proposed", 
+        "Exp": 2, 
+        "Bits": 16
+    }, 
+    {
+        "Power": 21.0143, 
+        "Area": 10436.05935, 
+        "Energy": 42.0286, 
+        "Delay": 2.0, 
+        "Design": "Proposed", 
+        "Exp": 2, 
+        "Bits": 32
+    }
+]

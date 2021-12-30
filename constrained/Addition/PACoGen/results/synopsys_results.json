@@ -1,0 +1,47 @@
+[
+	{
+		"Design": "PACoGen",
+		"Bits": 8,
+		"Exp": 1,
+		"Area": 2301.432020,
+		"Power": 3.4556,
+		"Delay": 0.86,
+		"Energy": 2.971816
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 8,
+		"Exp": 2,
+		"Area": 2665.992024,
+		"Power": 3.8564,
+		"Delay": 0.86,
+		"Energy": 3.316504
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 16,
+		"Exp": 1,
+		"Area": 4881.105651,
+		"Power": 7.3144,
+		"Delay": 1.02,
+		"Energy": 7.460688
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 16,
+		"Exp": 2,
+		"Area": 5129.712050,
+		"Power": 7.6751,
+		"Delay": 1.06,
+		"Energy": 8.135606
+	},
+	{
+		"Design": "PACoGen",
+		"Bits": 32,
+		"Exp": 2,
+		"Area": 6240.796837,
+		"Power": 7.2106,
+		"Delay": 2.00,
+		"Energy": 14.4212
+	}
+]

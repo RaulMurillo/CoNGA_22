@@ -12,7 +12,7 @@ analyze -format vhdl -lib WORK "./posit_comp_mul.vhd"
 elaborate posit_comp_mul
 #rtl2saif -output "posit_comp_mul.RT.saif" -design "posit_comp_mul"
 uniquify
-#set_max_delay 1 [all_outputs]
+set_max_delay 1 [all_outputs]
 set_switching_activity -type inputs -toggle_rate 0.1
 set_switching_activity -type registers -toggle_rate 0.1
 compile

@@ -1,0 +1,47 @@
+[
+	{
+		"Design": "Proposed",
+		"Bits": 8,
+		"Exp": 1,
+		"Area": 1952.160019,
+		"Power": 3.0562,
+		"Delay": 0.64,
+		"Energy": 1.955968
+	},
+	{
+		"Design": "Proposed",
+		"Bits": 8,
+		"Exp": 2,
+		"Area": 1668.038420,
+		"Power": 2.5568,
+		"Delay": 0.69,
+		"Energy": 1.764192
+	},
+	{
+		"Design": "Proposed",
+		"Bits": 16,
+		"Exp": 1,
+		"Area": 2581.084824,
+		"Power": 3.8029,
+		"Delay": 1.02,
+		"Energy": 3.878958
+	},
+	{
+		"Design": "Proposed",
+		"Bits": 16,
+		"Exp": 2,
+		"Area": 2450.313628,
+		"Power": 3.8042,
+		"Delay": 1.02,
+		"Energy": 3.880284
+	},
+	{
+		"Design": "Proposed",
+		"Bits": 32,
+		"Exp": 2,
+		"Area": 3642.542436,
+		"Power": 4.6944,
+		"Delay": 2.00,
+		"Energy": 9.3888
+	}
+]

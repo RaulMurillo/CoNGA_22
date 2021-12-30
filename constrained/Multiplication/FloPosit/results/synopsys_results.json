@@ -1,0 +1,47 @@
+[
+	{
+		"Design": "Flo-Posit",
+		"Bits": 8,
+		"Exp": 1,
+		"Area": 1447.656016,
+		"Power": 2.3178,
+		"Delay": 0.52,
+		"Energy": 1.205256
+	},
+	{
+		"Design": "Flo-Posit",
+		"Bits": 8,
+		"Exp": 2,
+		"Area": 1356.398413,
+		"Power": 2.1043,
+		"Delay": 0.50,
+		"Energy": 1.05215
+	},
+	{
+		"Design": "Flo-Posit",
+		"Bits": 16,
+		"Exp": 1,
+		"Area": 4568.054456,
+		"Power": 8.1201,
+		"Delay": 1.01,
+		"Energy": 8.201301
+	},
+	{
+		"Design": "Flo-Posit",
+		"Bits": 16,
+		"Exp": 2,
+		"Area": 4221.369648,
+		"Power": 7.6812,
+		"Delay": 1.01,
+		"Energy": 7.758012
+	},
+	{
+		"Design": "Flo-Posit",
+		"Bits": 32,
+		"Exp": 2,
+		"Area": 12631.416182,
+		"Power": 25.5568,
+		"Delay": 1.87,
+		"Energy": 47.791216
+	}
+]

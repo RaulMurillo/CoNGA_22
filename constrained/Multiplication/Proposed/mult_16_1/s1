@@ -11,7 +11,7 @@ analyze -format vhdl -lib WORK "./flopoco.vhdl"
 elaborate PositMult
 #rtl2saif -output "PositMult.RT.saif" -design "PositMult"
 uniquify
-#set_max_delay 1 [all_outputs]
+set_max_delay 1 [all_outputs]
 set_switching_activity -type inputs -toggle_rate 0.1
 set_switching_activity -type registers -toggle_rate 0.1
 compile

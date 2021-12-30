@@ -11,7 +11,7 @@ analyze -format verilog -lib WORK "./posit_add.v"
 elaborate posit_add
 #rtl2saif -output "posit_add_32_2.RT.saif" -design "posit_add_32_2"
 uniquify
-#set_max_delay 1 [all_outputs]
+set_max_delay 1 [all_outputs]
 set_switching_activity -type inputs -toggle_rate 0.1
 set_switching_activity -type registers -toggle_rate 0.1
 compile
