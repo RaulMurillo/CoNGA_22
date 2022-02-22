@@ -5,7 +5,7 @@ echo "My timing report script"
 touch results/delay.csv
 R="$PWD/results/delay.csv"
 
-for d in Old New
+for d in Old New IEEE
 do
 	cd $d
 	printf ${d}, >> $R

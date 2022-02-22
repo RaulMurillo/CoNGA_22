@@ -14,5 +14,13 @@
 		"Power": 0.2687,
 		"Delay": 0.88,
 		"Energy": 0.236456
+	},
+	{
+		"Component": "Decoder",
+		"Design": "IEEE",
+		"Area": 85.142401,
+		"Power": 4.2387e-02,
+		"Delay": 0.16,
+		"Energy": 0.00678192
 	}
 ]

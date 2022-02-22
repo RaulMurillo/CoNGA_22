@@ -5,7 +5,7 @@ echo "My area report script"
 touch results/area.csv
 R="$PWD/results/area.csv"
 
-for d in Old New
+for d in Old New IEEE
 do
 	cd $d
   printf ${d}, >> $R

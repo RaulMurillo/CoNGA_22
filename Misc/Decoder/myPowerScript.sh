@@ -5,7 +5,7 @@ echo "My power report script"
 touch results/power.csv
 R="$PWD/results/power.csv"
 
-for d in Old New
+for d in Old New IEEE
 do
 	cd $d
 	printf ${d}, >> $R

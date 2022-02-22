@@ -1,6 +1,6 @@
 [
 	{
-		"Component": "Encoder",
+		"Component": "Decoder",
 		"Design": "Old",
 		"Area": 843.662399,
 		"Power": 0.8172,
@@ -8,11 +8,19 @@
 		"Energy": 0.931608
 	},
 	{
-		"Component": "Encoder",
+		"Component": "Decoder",
 		"Design": "New",
 		"Area": 564.244803,
 		"Power": 0.5120,
 		"Delay": 0.93,
 		"Energy": 0.47616
+	},
+	{
+		"Component": "Decoder",
+		"Design": "IEEE",
+		"Area": 84.436801,
+		"Power": 4.0669e-02,
+		"Delay": 0.26,
+		"Energy": 0.01057394
 	}
 ]

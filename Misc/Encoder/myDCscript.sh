@@ -7,7 +7,7 @@ echo "My dc_shell script"
 # dirs2=(Use_hm_0 Use_hm_1)
 
 
-for d in Old New
+for d in Old New IEEE
 do
 	cd $d
 	echo ""
