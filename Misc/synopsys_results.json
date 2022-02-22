@@ -1,82 +1,82 @@
 [
     {
-        "Power": 0.5896, 
-        "Area": 591.0576, 
-        "Energy": 0.866712, 
-        "Component": "Decoder", 
-        "Delay": 1.47, 
-        "Design": "Old"
-    }, 
+        "Component": "Decoder",
+        "Design": "Old",
+        "Area": 591.0576,
+        "Power": 0.5896,
+        "Delay": 1.47,
+        "Energy": 0.866712
+    },
     {
-        "Power": 0.2687, 
-        "Area": 392.078402, 
-        "Energy": 0.236456, 
-        "Component": "Decoder", 
-        "Delay": 0.88, 
-        "Design": "New"
-    }, 
+        "Component": "Decoder",
+        "Design": "New",
+        "Area": 392.078402,
+        "Power": 0.2687,
+        "Delay": 0.88,
+        "Energy": 0.236456
+    },
     {
-        "Power": 0.042387, 
-        "Area": 85.142401, 
-        "Energy": 0.00678192, 
-        "Component": "Decoder", 
-        "Delay": 0.16, 
-        "Design": "IEEE"
-    }, 
+        "Component": "Decoder",
+        "Design": "IEEE",
+        "Area": 85.142401,
+        "Power": 0.042387,
+        "Delay": 0.16,
+        "Energy": 0.00678192
+    },
     {
-        "Power": 0.8172, 
-        "Area": 843.662399, 
-        "Energy": 0.931608, 
-        "Component": "Encoder", 
-        "Delay": 1.14, 
-        "Design": "Old"
-    }, 
+        "Component": "Encoder",
+        "Design": "Old",
+        "Area": 843.662399,
+        "Power": 0.8172,
+        "Delay": 1.14,
+        "Energy": 0.931608
+    },
     {
-        "Power": 0.512, 
-        "Area": 564.244803, 
-        "Energy": 0.47616, 
-        "Component": "Encoder", 
-        "Delay": 0.93, 
-        "Design": "New"
-    }, 
+        "Component": "Encoder",
+        "Design": "New",
+        "Area": 564.244803,
+        "Power": 0.512,
+        "Delay": 0.93,
+        "Energy": 0.47616
+    },
     {
-        "Power": 0.040669, 
-        "Area": 84.436801, 
-        "Energy": 0.01057394, 
-        "Component": "Encoder", 
-        "Delay": 0.26, 
-        "Design": "IEEE"
-    }, 
+        "Component": "Encoder",
+        "Design": "IEEE",
+        "Area": 84.436801,
+        "Power": 0.040669,
+        "Delay": 0.26,
+        "Energy": 0.01057394
+    },
     {
-        "Power": 1.4425, 
-        "Area": 1387.915205, 
-        "Energy": 4.255375, 
-        "Component": "Adder", 
-        "Delay": 2.95, 
-        "Design": "Old"
-    }, 
+        "Component": "Adder",
+        "Design": "Old",
+        "Area": 1387.915205,
+        "Power": 1.4425,
+        "Delay": 2.95,
+        "Energy": 4.255375
+    },
     {
-        "Power": 1.2428, 
-        "Area": 1274.548813, 
-        "Energy": 3.107, 
-        "Component": "Adder", 
-        "Delay": 2.5, 
-        "Design": "New"
-    }, 
+        "Component": "Adder",
+        "Design": "New",
+        "Area": 1274.548813,
+        "Power": 1.2428,
+        "Delay": 2.5,
+        "Energy": 3.107
+    },
     {
-        "Power": 11.0957, 
-        "Area": 5699.836842, 
-        "Energy": 19.528432, 
-        "Component": "Multiplier", 
-        "Delay": 1.76, 
-        "Design": "Old"
-    }, 
+        "Component": "Multiplier",
+        "Design": "Old",
+        "Area": 5699.836842,
+        "Power": 11.0957,
+        "Delay": 1.76,
+        "Energy": 19.528432
+    },
     {
-        "Power": 11.9684, 
-        "Area": 6120.609644, 
-        "Energy": 20.585648, 
-        "Component": "Multiplier", 
-        "Delay": 1.72, 
-        "Design": "New"
+        "Component": "Multiplier",
+        "Design": "New",
+        "Area": 6120.609644,
+        "Power": 11.9684,
+        "Delay": 1.72,
+        "Energy": 20.585648
     }
 ]
