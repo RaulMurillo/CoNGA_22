@@ -1,7 +1,7 @@
 import json
 
 fname = "synopsys_results.json"
-dirs = ["PACoGen", "FloPosit", "MARTo", "Proposed"]
+dirs = ["PACoGen", "FloPosit", "MArTo", "Proposed"]
 
 if __name__=="__main__":
 	with open(fname, "w") as file:
