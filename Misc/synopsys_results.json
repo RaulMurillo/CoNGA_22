@@ -27,7 +27,7 @@
         "Power": 0.8172, 
         "Area": 843.662399, 
         "Energy": 0.931608, 
-        "Component": "Decoder", 
+        "Component": "Encoder", 
         "Delay": 1.14, 
         "Design": "Old"
     }, 
@@ -35,7 +35,7 @@
         "Power": 0.512, 
         "Area": 564.244803, 
         "Energy": 0.47616, 
-        "Component": "Decoder", 
+        "Component": "Encoder", 
         "Delay": 0.93, 
         "Design": "New"
     }, 
@@ -43,7 +43,7 @@
         "Power": 0.040669, 
         "Area": 84.436801, 
         "Energy": 0.01057394, 
-        "Component": "Decoder", 
+        "Component": "Encoder", 
         "Delay": 0.26, 
         "Design": "IEEE"
     }, 
