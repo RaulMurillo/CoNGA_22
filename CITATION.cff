@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Murillo"
+  given-names: "Raul"
+  orcid: "https://orcid.org/0000-0003-0204-0797"
+- family-names: "Mallasén"
+  given-names: "David"
+  orcid: "https://orcid.org/0000-0002-0166-834X"
+- family-names: "Del Barrio"
+  given-names: "Alberto A."
+  orcid: "https://orcid.org/0000-0002-6769-1200"
+- family-names: "Botella"
+  given-names: "Guillermo"
+  orcid: "https://orcid.org/0000-0002-0848-2636"
+title: "CoNGA_22 Software"
+url: "https://github.com/RaulMurillo/CoNGA_22"
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Murillo"
+    given-names: "Raul"
+    orcid: "https://orcid.org/0000-0003-0204-0797"
+  - family-names: "Mallasén"
+    given-names: "David"
+    orcid: "https://orcid.org/0000-0002-0166-834X"
+  - family-names: "Del Barrio"
+    given-names: "Alberto A."
+    orcid: "https://orcid.org/0000-0002-6769-1200"
+  - family-names: "Botella"
+    given-names: "Guillermo"
+    orcid: "https://orcid.org/0000-0002-0848-2636"
+  doi: "10.1007/978-3-031-09779-9_6"
+  booktitle: "Conference on Next Generation Arithmetic"
+  start: 84 # First page number
+  end: 99 # Last page number
+  title: "Comparing Different Decodings for Posit Arithmetic"
+  year: 2022
