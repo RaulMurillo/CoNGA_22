@@ -30,9 +30,9 @@ preferred-citation:
   - family-names: "Botella"
     given-names: "Guillermo"
     orcid: "https://orcid.org/0000-0002-0848-2636"
-  doi: "10.1007/978-3-031-09779-9\_6"
-  journal: "Conference on Next Generation Arithmetic"
+  doi: "10.1007/978-3-031-09779-9_6"
+  booktitle: "Conference on Next Generation Arithmetic"
   start: 84 # First page number
   end: 99 # Last page number
-  title: "Comparing Different Decodings for Posit Arithmetic"
+  title: "Comparing Different Decodings for Posit Arithmetic"
   year: 2022
