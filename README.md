@@ -1,4 +1,4 @@
-# CoNGA_22
+# Comparing Different Decodings for Posit Arithmetic
 
 Synthesis sources, results and [plots](figs) for the paper published at [Conference on Next Generation Arithmetic (CoNGA) 2022](https://www.sc-asia.org/conga/).
 
